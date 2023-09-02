@@ -1,0 +1,10 @@
+@use "../../sass/mixins.scss";
+
+#about {
+  height: 80svh;
+  background-color: darksalmon;
+  @include mixins.flexCenter();
+  section {
+    @include mixins.flexCenter();
+  }
+}

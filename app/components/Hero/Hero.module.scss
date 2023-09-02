@@ -1,0 +1,10 @@
+@use "../../sass/mixins.scss";
+
+#hero {
+  height: 80svh;
+  background-color: cornflowerblue;
+  @include mixins.flexCenter();
+  section {
+    @include mixins.flexCenter();
+  }
+}
