@@ -1,0 +1,25 @@
+@use "../../sass/mixins.scss";
+
+#footer {
+  height: 40svh;
+  background-color: palegreen;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  section {
+    @include mixins.flexCenter();
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+  }
+  section aside {
+    flex-basis: 50%;
+    width: 100%;
+    @include mixins.flexCenter();
+    background-color: coral;
+  }
+  section :first-child {
+    border-bottom: 2px solid black;
+  }
+}
