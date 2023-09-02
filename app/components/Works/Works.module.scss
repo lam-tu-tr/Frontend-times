@@ -1,10 +1,36 @@
 @use "../../sass/mixins.scss";
 
 #works {
-  height: 70svh;
+  height: 90svh;
   background-color: khaki;
   @include mixins.flexCenter();
-  section {
-    @include mixins.flexCenter();
+  padding: 2rem 0.2rem 2rem 0.2rem;
+  > ul {
+    @include mixins.flex(row, space-between, center, space-between);
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    li {
+      width: 48%;
+      height: 48%;
+      @include mixins.flex(column, center, center, center);
+      // border: 0.5px solid white;
+      // border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+      // padding: 0.3rem;
+      div:first-child {
+        @include mixins.flexCenter();
+      }
+      div:last-child {
+        @include mixins.flex(column, space-between, flex-start, center);
+      }
+      div {
+        flex-basis: 50%;
+        width: 100%;
+        overflow: hidden;
+        h3 {
+          text-align: center;
+        }
+      }
+    }
   }
 }

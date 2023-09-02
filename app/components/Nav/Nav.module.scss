@@ -1,14 +1,36 @@
+@use "../../sass/mixins.scss";
+
 #nav {
   background-color: red;
-  height: 4svh;
+  height: 6svh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 1rem;
+  justify-content: flex-end;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  position: fixed;
+  width: 100%;
   ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: aqua;
+    height: 2rem;
+    li {
+      @include mixins.flexCenter();
+      width: 24%;
+      border-radius: 0.7rem 0.7rem 0 0;
+      &:nth-child(1) {
+        background-color: cornflowerblue;
+      }
+      &:nth-child(2) {
+        background-color: darksalmon;
+      }
+      &:nth-child(3) {
+        background-color: khaki;
+      }
+      &:nth-child(4) {
+        background-color: coral;
+      }
+    }
   }
 }

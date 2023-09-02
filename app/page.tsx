@@ -8,7 +8,6 @@ import Works from "./components/Works/Works";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col ">
-      <Nav></Nav>
       <Hero></Hero>
       <About></About>
       <Works></Works>

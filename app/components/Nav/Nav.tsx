@@ -7,6 +7,7 @@ export default function Nav() {
   return (
     <nav id={style.nav}>
       <ul>
+        <li>Main</li>
         <li>About</li>
         <li>Works</li>
         <li>Contact</li>
