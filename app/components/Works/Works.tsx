@@ -10,7 +10,6 @@ import PokedexPNG from "../../assets/Pokedex.png";
 import LamTypesPNG from "../../assets/Lamtypes.png";
 
 export default function Works() {
-  const vercel = "/../../assets/Itinerary.png";
   const projectsData = [
     {
       src: ItineraryPNG,
@@ -51,9 +50,10 @@ export default function Works() {
         <div>
           <Image
             src={project.src}
-            width={200}
-            height={200}
+            // width="300"
+            // height="300"
             alt={project.alt}
+            fill={true}
             objectFit="cover"
           ></Image>
         </div>
