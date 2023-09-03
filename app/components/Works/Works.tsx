@@ -58,7 +58,7 @@ export default function Works() {
           ></Image>
         </div>
         <div>
-          <h3>{project.title}</h3>
+          <h3 className="text-left">{project.title}</h3>
           <article>
             <aside>{project.rating}</aside>
             <p>{project.description}</p>
@@ -70,6 +70,7 @@ export default function Works() {
   });
   return (
     <section id={styles.works}>
+      <h1>My Works</h1>
       <ul>{projects}</ul>
     </section>
   );

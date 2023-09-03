@@ -1,22 +1,32 @@
 @use "../../sass/mixins.scss";
 
 #works {
-  height: 90svh;
-  background-color: khaki;
+  height: 75svh;
   @include mixins.flexCenter();
-  padding: 2rem 0.2rem 2rem 0.2rem;
+
+  h1 {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    border-right: 1px solid black;
+    height: 100%;
+    width: 10svw;
+    @include mixins.flexCenter();
+    letter-spacing: 1.5rem;
+  }
   > ul {
-    @include mixins.flex(row, space-between, center, space-between);
-    flex-wrap: wrap;
     width: 100%;
     height: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 80%;
+    overflow-x: auto;
+    padding: 5rem 0;
     li {
-      width: 48%;
-      height: 48%;
+      // width: 200px;
+      // height: 48%;
+      background-color: coral;
       @include mixins.flex(column, center, center, center);
-      // border: 0.5px solid white;
-      // border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
-      // padding: 0.3rem;
+      margin: 0 1rem;
       div:first-child {
         @include mixins.flexCenter();
       }
