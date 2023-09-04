@@ -3,13 +3,28 @@
 @tailwind utilities;
 
 :root {
+  --spacing-xsmall: 4px;
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 32px;
+  --spacing-xlarge: 64px;
+
+  --font-size-small: 12px;
+  --font-size-medium: 16px;
+  --font-size-large: 24px;
+  --font-size-xlarge: 48px;
+}
+
+:root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
   padding: 0;
   margin: 0;
+  font-size: var(--font-size-medium);
 }
+
 /*
 @media (prefers-color-scheme: dark) {
   :root {

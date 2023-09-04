@@ -16,7 +16,8 @@ export default function Works() {
       alt: "Project 1 Pic",
       title: "Ai Itinery Planner",
       rating: 3,
-      description: "temp",
+      description:
+        "Empower your journey with the magic of Artificial Intelligence, crafting seamless and unforgettable travel itineraries just for you.",
       link: "Project 1",
     },
     {
@@ -24,7 +25,8 @@ export default function Works() {
       alt: "Project 2 Pic",
       title: "Kim Nails and Beauty Lounge",
       rating: 3,
-      description: "Prject2",
+      description:
+        "Elevate your style with stunning nail artistry at our salon – book your appointment for pampering perfection.",
       link: "Project 2",
     },
     {
@@ -32,7 +34,8 @@ export default function Works() {
       alt: "Project 3 Pic",
       title: "Sinnoh Pokedex",
       rating: 3,
-      description: "temp",
+      description:
+        "Discover and learn about Pokémon like never before with our Pokedex web app - your portal to the Pokemon world",
       link: "Project 3",
     },
     {
@@ -40,7 +43,8 @@ export default function Works() {
       alt: "Project 4 Pic",
       title: "Lam Types",
       rating: 3,
-      description: "temp",
+      description:
+        "Boost your touch typing skills with this speed test web app - assess your typing speed and accuracy",
       link: "Project 4",
     },
   ];
@@ -58,12 +62,14 @@ export default function Works() {
           ></Image>
         </div>
         <div>
-          <h3 className="text-left">{project.title}</h3>
           <article>
-            <aside>{project.rating}</aside>
+            <h3>{project.title}</h3>
+
+            <aside>Free Shipping</aside>
+
             <p>{project.description}</p>
-            <p>Free Shipping</p>
           </article>
+          <p>{project.rating}</p>
         </div>
       </li>
     );

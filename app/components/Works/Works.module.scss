@@ -2,56 +2,85 @@
 
 #works {
   @include mixins.flexCenter();
-  height: 60svh;
+  height: 80svh;
   h1 {
     writing-mode: vertical-lr;
     text-orientation: upright;
-    width: 50vw;
-    // font-size: var(--font-size-large);
-    font-size: x-large; // height: 100%;
+    padding: 0;
+    font-size: small;
     @include mixins.flexCenter();
     letter-spacing: 1.5rem;
+    block-size: 10svw;
   }
   > ul {
-    height: 100%;
+    // =========Horizontal scroll settings=========
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 60svw;
-    overflow-x: auto;
+    grid-auto-columns: 90svw;
+    overflow-x: scroll;
+    // Scroll snap
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 1rem;
+    > * {
+      scroll-snap-align: center;
+    }
+    // =============================================
+    height: 100%;
+    width: 90%;
     border-left: 1px solid black;
-    padding: 5rem 0;
-    padding-left: 1rem;
+
     li {
-      position: relative;
-      // width: 200px;
-      // height: 48%;
+      // position: relative;
 
       @include mixins.flex(column, center, center, center);
-      // padding:
-      margin: 0 1rem;
-      border: 1px solid white;
-      h3 {
-        font-size: larger;
-      }
+
       div:first-child {
         @include mixins.flexCenter();
-        border-right: 2px solid black;
-
-        border-top: 2px solid black;
+        flex-basis: 60%;
       }
       div:last-child {
-        @include mixins.flex(column, space-between, flex-start, center);
-        padding: 1rem 0;
-        border-right: 2px solid black;
-        border-bottom: 2px solid black;
+        display: flex;
+        flex-direction: row;
+
+        flex-basis: 40%;
+        border-top: 1px solid black;
+        h3 {
+          font-size: var(--font-size-large);
+          border-bottom: 1px solid black;
+        }
       }
       div {
         position: relative;
-        flex-basis: 50%;
         width: 100%;
         overflow: hidden;
-        h3 {
-          text-align: center;
+        > * {
+          width: 100%;
+        }
+
+        article {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          border-bottom: 1px solid black;
+          flex-basis: 90%;
+          h3 {
+            text-align: center;
+          }
+          aside {
+            text-align: center;
+            border-bottom: 1px solid black;
+          }
+          p {
+            @include mixins.flexCenter();
+            flex-grow: 50%;
+          }
+        }
+        > p {
+          flex-basis: 10%;
+          writing-mode: vertical-lr;
+          text-orientation: upright;
+          border-left: 1px solid black;
+          @include mixins.flex(row, flex-end, center, center);
         }
       }
     }
