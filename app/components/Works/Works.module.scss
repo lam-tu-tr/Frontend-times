@@ -2,7 +2,7 @@
 
 #works {
   @include mixins.flexCenter();
-  height: 70vh;
+  height: 70svh;
   h1 {
     writing-mode: vertical-lr;
     text-orientation: upright;
@@ -12,46 +12,52 @@
     block-size: 10svw;
   }
   > ul {
-    // =========Horizontal scroll settings=========
+    //* =========Horizontal scroll settings=========
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 90svw;
     overflow-x: scroll;
-    // Scroll snap
+    //* Scroll snap
     scroll-snap-type: inline mandatory;
     scroll-padding-inline: 1rem;
     > * {
       scroll-snap-align: center;
     }
-    // =============================================
+    //* =============================================
     height: 100%;
     width: 90%;
-    border-left: 1px solid black;
+    border-left: 1px solid #b7b7b7;
 
     li {
       @include mixins.flex(column, center, center, center);
 
+      div {
+        width: 100%;
+      }
       div:first-child {
         @include mixins.flexCenter();
-        // flex-basis: 60%;
-        // padding: 1rem;
+        flex-basis: 60%;
+        padding: 3rem;
         position: relative;
+        width: 90%;
+        aspect-ratio: 1/1;
+        object-fit: contain;
       }
       div:last-child {
         display: flex;
         flex-direction: row;
 
         flex-basis: 40%;
-        border-top: 1px solid black;
+        border-top: 1px solid #b7b7b7;
         h3 {
           font-size: var(--font-size-large);
-          border-bottom: 1px solid black;
+          border-bottom: 1px solid #b7b7b7;
         }
         article {
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
-          border-bottom: 1px solid black;
+          border-bottom: 1px solid #b7b7b7;
           h3 {
             text-align: center;
           }
@@ -60,14 +66,14 @@
           }
           p {
             @include mixins.flexCenter();
-            // flex-grow: 50%;
+            flex-grow: 4;
           }
         }
         > p {
           flex-basis: 10%;
           writing-mode: vertical-lr;
           text-orientation: upright;
-          border-left: 1px solid black;
+          border-left: 1px solid #b7b7b7;
           @include mixins.flex(row, flex-end, center, center);
         }
       }
