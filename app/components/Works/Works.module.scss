@@ -2,11 +2,10 @@
 
 #works {
   @include mixins.flexCenter();
-  height: 80svh;
+  height: 70vh;
   h1 {
     writing-mode: vertical-lr;
     text-orientation: upright;
-    padding: 0;
     font-size: small;
     @include mixins.flexCenter();
     letter-spacing: 1.5rem;
@@ -30,13 +29,13 @@
     border-left: 1px solid black;
 
     li {
-      // position: relative;
-
       @include mixins.flex(column, center, center, center);
 
       div:first-child {
         @include mixins.flexCenter();
-        flex-basis: 60%;
+        // flex-basis: 60%;
+        // padding: 1rem;
+        position: relative;
       }
       div:last-child {
         display: flex;
@@ -48,31 +47,20 @@
           font-size: var(--font-size-large);
           border-bottom: 1px solid black;
         }
-      }
-      div {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        > * {
-          width: 100%;
-        }
-
         article {
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
           border-bottom: 1px solid black;
-          flex-basis: 90%;
           h3 {
             text-align: center;
           }
           aside {
             text-align: center;
-            border-bottom: 1px solid black;
           }
           p {
             @include mixins.flexCenter();
-            flex-grow: 50%;
+            // flex-grow: 50%;
           }
         }
         > p {

@@ -1,8 +1,6 @@
 import Image from "next/image";
 import About from "./components/About/About";
-import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
-import Nav from "./components/Nav/Nav";
 import Works from "./components/Works/Works";
 
 export default function Home() {
@@ -11,7 +9,6 @@ export default function Home() {
       <Hero></Hero>
       <About></About>
       <Works></Works>
-      <Footer></Footer>
     </main>
   );
 }

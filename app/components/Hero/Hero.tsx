@@ -6,7 +6,7 @@ import LamTypesPNG from "../../assets/Lamtypes.png";
 
 export default function Hero() {
   return (
-    <main id={styles.hero}>
+    <div id={styles.hero}>
       <section>
         <p>Hello, welcome to my page</p>
         <aside>
@@ -18,6 +18,6 @@ export default function Hero() {
           />
         </aside>
       </section>
-    </main>
+    </div>
   );
 }

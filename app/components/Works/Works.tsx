@@ -54,11 +54,11 @@ export default function Works() {
         <div>
           <Image
             src={project.src}
-            // width="300"
-            // height="300"
+            width="300"
+            height="300"
             alt={project.alt}
-            fill={true}
-            objectFit="cover"
+            // fill={true}
+            // sizes="60svw"
           ></Image>
         </div>
         <div>
@@ -69,7 +69,7 @@ export default function Works() {
 
             <p>{project.description}</p>
           </article>
-          <p>{project.rating}</p>
+          {/* <p>{project.rating}</p> */}
         </div>
       </li>
     );
