@@ -54,11 +54,10 @@ export default function Works() {
         <div>
           <Image
             src={project.src}
-            width="300"
-            height="300"
             alt={project.alt}
-            // fill={true}
+            fill={true}
             // sizes="60svw"
+            style={{ objectFit: "contain" }}
           ></Image>
         </div>
         <div>

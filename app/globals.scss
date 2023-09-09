@@ -22,9 +22,33 @@
 
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   font-size: var(--font-size-medium);
 }
 
+/* screens: {
+
+  'xxsm': '280px',
+  // => @media (min-width: 280px) { ... }
+
+  'xsm': '320px',
+  // => @media (min-width: 320px) { ... }
+
+  'sm': '640px',
+  // => @media (min-width: 640px) { ... }
+
+  'md': '768px',
+  // => @media (min-width: 768px) { ... }
+
+  'lg': '1024px',
+  // => @media (min-width: 1024px) { ... }
+
+  'xl': '1280px',
+  // => @media (min-width: 1280px) { ... }
+
+  '2xl': '1536px',
+  // => @media (min-width: 1536px) { ... }
+} */
 /*
 @media (prefers-color-scheme: dark) {
   :root {
@@ -43,3 +67,14 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+
+body {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  grid-area: "nav nav nav nav nav nav" "intro intro intro works works works"
+    "intro intro intro works works works" "about about about works works works"
+    "contact contact other other other other"
+    "contact contact footer footer footer footer"
+    "footer footer footer footer footer footer";
+}
