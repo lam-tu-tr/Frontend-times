@@ -2,81 +2,82 @@
 
 #works {
   @include mixins.flexCenter();
-  height: 70svh;
-  h1 {
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    font-size: small;
-    @include mixins.flexCenter();
-    letter-spacing: 1.5rem;
-    block-size: 10svw;
-  }
-  > ul {
-    //* =========Horizontal scroll settings=========
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 90svw;
-    overflow-x: scroll;
-    //* Scroll snap
-    scroll-snap-type: inline mandatory;
-    scroll-padding-inline: 1rem;
-    > * {
-      scroll-snap-align: center;
-    }
-    //* =============================================
-    height: 100%;
-    width: 90%;
-    border-left: 1px solid black;
+  grid-area: works;
+  background-color: darkmagenta;
+  // h1 {
+  //   writing-mode: vertical-lr;
+  //   text-orientation: upright;
+  //   font-size: small;
+  //   @include mixins.flexCenter();
+  //   letter-spacing: 1.5rem;
+  //   block-size: 10svw;
+  // }
+  // > ul {
+  //   //* =========Horizontal scroll settings=========
+  //   display: grid;
+  //   grid-auto-flow: column;
+  //   grid-auto-columns: 90svw;
+  //   overflow-x: scroll;
+  //   //* Scroll snap
+  //   scroll-snap-type: inline mandatory;
+  //   scroll-padding-inline: 1rem;
+  //   > * {
+  //     scroll-snap-align: center;
+  //   }
+  //   //* =============================================
+  //   height: 100%;
+  //   width: 90%;
+  //   border-left: 1px solid black;
 
-    li {
-      @include mixins.flex(column, center, center, center);
+  //   li {
+  //     @include mixins.flex(column, center, center, center);
 
-      div {
-        width: 100%;
-      }
-      div:first-child {
-        @include mixins.flexCenter();
-        flex-basis: 60%;
-        padding: 3rem;
-        position: relative;
-        width: 90%;
-        // aspect-ratio: 1/1;
-        object-fit: contain;
-      }
-      div:last-child {
-        display: flex;
-        flex-direction: row;
+  //     div {
+  //       width: 100%;
+  //     }
+  //     div:first-child {
+  //       @include mixins.flexCenter();
+  //       flex-basis: 60%;
+  //       padding: 3rem;
+  //       position: relative;
+  //       width: 90%;
+  //       // aspect-ratio: 1/1;
+  //       object-fit: contain;
+  //     }
+  //     div:last-child {
+  //       display: flex;
+  //       flex-direction: row;
 
-        flex-basis: 40%;
-        border-top: 1px solid black;
-        h3 {
-          font-size: var(--font-size-large);
-          border-bottom: 1px solid black;
-        }
-        article {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          border-bottom: 1px solid black;
-          h3 {
-            text-align: center;
-          }
-          aside {
-            text-align: center;
-          }
-          p {
-            @include mixins.flexCenter();
-            flex-grow: 4;
-          }
-        }
-        > p {
-          flex-basis: 10%;
-          writing-mode: vertical-lr;
-          text-orientation: upright;
-          border-left: 1px solid black;
-          @include mixins.flex(row, flex-end, center, center);
-        }
-      }
-    }
-  }
+  //       flex-basis: 40%;
+  //       border-top: 1px solid black;
+  //       h3 {
+  //         font-size: var(--font-size-large);
+  //         border-bottom: 1px solid black;
+  //       }
+  //       article {
+  //         display: flex;
+  //         flex-direction: column;
+  //         justify-content: flex-start;
+  //         border-bottom: 1px solid black;
+  //         h3 {
+  //           text-align: center;
+  //         }
+  //         aside {
+  //           text-align: center;
+  //         }
+  //         p {
+  //           @include mixins.flexCenter();
+  //           flex-grow: 4;
+  //         }
+  //       }
+  //       > p {
+  //         flex-basis: 10%;
+  //         writing-mode: vertical-lr;
+  //         text-orientation: upright;
+  //         border-left: 1px solid black;
+  //         @include mixins.flex(row, flex-end, center, center);
+  //       }
+  //     }
+  //   }
+  // }
 }

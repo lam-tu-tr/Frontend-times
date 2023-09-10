@@ -1,7 +1,8 @@
 @use "../../sass/mixins.scss";
 
-#hero {
-  height: 80svh;
+#intro {
+  // height: 80svh;
+  grid-area: intro;
   background-color: cornflowerblue;
   @include mixins.flexCenter();
   section {

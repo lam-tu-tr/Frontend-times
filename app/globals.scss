@@ -67,14 +67,18 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
-
 body {
+  padding: 5rem;
+}
+main {
+  background-color: darkgrey;
+  height: 100svh;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
-  grid-area: "nav nav nav nav nav nav" "intro intro intro works works works"
-    "intro intro intro works works works" "about about about works works works"
-    "contact contact other other other other"
-    "contact contact footer footer footer footer"
-    "footer footer footer footer footer footer";
+  grid-template-areas:
+    "intro intro intro intro works works"
+    "intro intro intro intro works works"
+    "about about about about works works"
+    "tech tech tech tech tech tech";
 }
