@@ -1,7 +1,7 @@
 @use "../../sass/mixins.scss";
 
 #about {
-  height: 80svh;
+  grid-area: about;
   background-color: darksalmon;
   @include mixins.flexCenter();
   section {
