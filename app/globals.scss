@@ -68,11 +68,11 @@ body {
     rgb(var(--background-start-rgb));
 } */
 body {
-  padding: 5rem;
+  // padding: 2rem;
 }
 main {
-  background-color: darkgrey;
-  height: 100svh;
+  background-color: black;
+  height: 95svh;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
@@ -81,4 +81,9 @@ main {
     "intro intro intro intro works works"
     "about about about about works works"
     "tech tech tech tech tech tech";
+
+  > * {
+    margin: 2px;
+    border-radius: 2rem;
+  }
 }
