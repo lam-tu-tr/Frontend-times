@@ -9,6 +9,7 @@ export default function Footer() {
         <aside>Links?</aside>
         <aside>More stuff</aside>
       </section>
+      <section>Connect</section>
     </footer>
   );
 }

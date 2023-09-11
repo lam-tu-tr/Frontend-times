@@ -1,0 +1,11 @@
+@use "../../sass/mixins.scss";
+
+#connect {
+  grid-area: connect;
+  background-color: darkseagreen;
+  @include mixins.flexCenter();
+  button {
+    background-color: paleturquoise;
+    padding: 2rem;
+  }
+}

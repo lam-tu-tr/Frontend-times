@@ -3,6 +3,8 @@ import About from "./components/About/About";
 import Works from "./components/Works/Works";
 import Intro from "./components/Intro/Intro";
 import Tech from "./components/Tech/Tech";
+import Connect from "./components/Connect/Connect";
+import Extra from "./components/Extra/Extra";
 
 export default function Home() {
   return (
@@ -10,7 +12,9 @@ export default function Home() {
       <Intro></Intro>
       <About></About>
       <Works></Works>
+      <Extra></Extra>
       <Tech></Tech>
+      <Connect></Connect>
     </main>
   );
 }

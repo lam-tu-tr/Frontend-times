@@ -2,22 +2,25 @@
 
 #footer {
   height: 40svh;
-  background-color: palegreen;
+  background-color: black;
   display: flex;
   flex-direction: row;
   border: 1px solid black;
   section {
+    background-color: lightgreen;
     @include mixins.flexCenter();
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
     border: 1px solid black;
+    border-radius: 2rem;
   }
   section aside {
     flex-basis: 50%;
     width: 100%;
     @include mixins.flexCenter();
     background-color: coral;
+    border-radius: 2rem;
   }
   section :first-child {
     border-bottom: 2px solid black;
