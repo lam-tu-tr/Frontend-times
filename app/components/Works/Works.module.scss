@@ -4,19 +4,19 @@
   @include mixins.flexCenter();
   grid-area: works;
   background-color: darkmagenta;
-  // h1 {
-  //   writing-mode: vertical-lr;
-  //   text-orientation: upright;
-  //   font-size: small;
-  //   @include mixins.flexCenter();
-  //   letter-spacing: 1.5rem;
-  //   block-size: 10svw;
-  // }
+  h1 {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: small;
+    @include mixins.flexCenter();
+    letter-spacing: 1.5rem;
+    block-size: 10svw;
+  }
   // > ul {
   //   //* =========Horizontal scroll settings=========
   //   display: grid;
   //   grid-auto-flow: column;
-  //   grid-auto-columns: 90svw;
+  //   grid-auto-columns: 80svw;
   //   overflow-x: scroll;
   //   //* Scroll snap
   //   scroll-snap-type: inline mandatory;
