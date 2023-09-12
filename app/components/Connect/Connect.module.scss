@@ -2,7 +2,8 @@
 
 #connect {
   grid-area: connect;
-  background-color: darkseagreen;
+  background-color: lightgreen;
+  z-index: 10;
   @include mixins.flexCenter();
   button {
     background-color: paleturquoise;

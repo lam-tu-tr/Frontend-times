@@ -78,9 +78,9 @@ main {
     "intro intro intro intro works works"
     "extra about about about works works"
     "extra tech tech tech tech connect";
-
-  > * {
-    margin: 2px;
-    border-radius: 2rem;
-  }
+  overflow-x: hidden;
+  // > * {
+  //   margin: 2px;
+  //   border-radius: 2rem;
+  // }
 }
