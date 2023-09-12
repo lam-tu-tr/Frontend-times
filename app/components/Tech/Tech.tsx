@@ -19,9 +19,23 @@ export default function Tech() {
       <section>
         {logos.map((tech, index) => {
           return (
-            <aside key={index}>
+            <span key={index}>
               <Image src={tech} width={60} height={60} alt={"tech"} />
-            </aside>
+            </span>
+          );
+        })}
+        {logos.map((tech, index) => {
+          return (
+            <span key={index}>
+              <Image src={tech} width={60} height={60} alt={"tech"} />
+            </span>
+          );
+        })}
+        {logos.map((tech, index) => {
+          return (
+            <span key={index}>
+              <Image src={tech} width={60} height={60} alt={"tech"} />
+            </span>
           );
         })}
       </section>
