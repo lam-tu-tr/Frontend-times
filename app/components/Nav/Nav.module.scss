@@ -1,6 +1,7 @@
 @use "../../sass/mixins.scss";
 
 #nav {
+  scroll-snap-align: center;
   background-color: red;
   height: 5svh;
   display: flex;

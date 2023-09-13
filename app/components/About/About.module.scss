@@ -3,6 +3,7 @@
 #about {
   grid-area: about;
   background-color: darksalmon;
+  padding: 3rem;
   @include mixins.flexCenter();
   section {
     @include mixins.flexCenter();

@@ -1,0 +1,27 @@
+@use "../../sass/mixins.scss";
+
+#extra {
+  grid-area: extra;
+  background-color: deepskyblue;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  #map {
+    height: 100%;
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    span {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  #base {
+    font-size: 4rem;
+    background-color: chartreuse;
+  }
+}
