@@ -20,21 +20,21 @@ export default function Tech() {
         {logos.map((tech, index) => {
           return (
             <span key={index}>
-              <Image src={tech} width={60} height={60} alt={"tech"} />
+              <Image src={tech} width={56} height={56} alt={"tech"} />
             </span>
           );
         })}
         {logos.map((tech, index) => {
           return (
             <span key={index}>
-              <Image src={tech} width={60} height={60} alt={"tech"} />
+              <Image src={tech} width={56} height={56} alt={"tech"} />
             </span>
           );
         })}
         {logos.map((tech, index) => {
           return (
             <span key={index}>
-              <Image src={tech} width={60} height={60} alt={"tech"} />
+              <Image src={tech} width={56} height={56} alt={"tech"} />
             </span>
           );
         })}
