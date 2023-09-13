@@ -8,7 +8,11 @@ export default function Intro() {
   return (
     <div id={styles.intro}>
       <section>
-        <p>Hello, welcome to my page</p>
+        <p>
+          Welcome to my web development portfolio! I&apos;m a dedicated frontend
+          developer focused on creating seamless user experiences that transform
+          digital concepts into reality.
+        </p>
       </section>
     </div>
   );

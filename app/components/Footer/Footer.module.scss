@@ -6,6 +6,8 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
+
+  scroll-snap-align: end;
   section {
     background-color: lightgreen;
     display: flex;

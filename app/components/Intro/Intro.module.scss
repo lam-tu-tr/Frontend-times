@@ -4,6 +4,8 @@
   // height: 80svh;
   grid-area: intro;
   background-color: cornflowerblue;
+  padding: 5rem;
+  font-size: xx-large;
   @include mixins.flexCenter();
   section {
     @include mixins.flexCenter();
