@@ -11,9 +11,9 @@ import next from "../../assets/icons/nextjs.svg";
 import node from "../../assets/icons/nodejs.svg";
 import prisma from "../../assets/icons/prisma.svg";
 import ts from "../../assets/icons/typescript.svg";
-
+import sass from "../../assets/icons/sass.svg";
 export default function Tech() {
-  const logos = [html, css, js, ts, next, node, express, prisma];
+  const logos = [html, css, sass, js, ts, next, node, express, prisma];
   return (
     <div id={style.tech}>
       <section>

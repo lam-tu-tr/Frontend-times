@@ -2,11 +2,22 @@
 
 #connect {
   grid-area: connect;
-  background-color: lightgreen;
+  background-color: #f1f0e8;
   z-index: 10;
+  display: flex;
+  flex-direction: row;
+
+  border-left: 0.2rem solid #41444b;
+  border-top: 0.2rem solid #41444b;
+  font-size: xx-large;
   @include mixins.flexCenter();
   button {
-    background-color: paleturquoise;
-    padding: 2rem;
+    height: 100%;
+    flex-basis: 50%;
+  }
+  div {
+    height: 100%;
+    flex-basis: 50%;
+    @include mixins.flexCenter;
   }
 }
