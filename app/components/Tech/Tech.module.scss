@@ -10,7 +10,7 @@
   // padding: 0 5rem;
   // // aside {
   // // }
-
+  position: relative;
   // min-width: 0;
   // min-height: 0;
   @keyframes slide {
@@ -26,6 +26,28 @@
       animation-play-state: paused;
     }
   }
+
+  //Fade in and out left and right
+  &::before,
+  &::after {
+    background-color: darkorange;
+    position: absolute;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    content: "";
+    z-index: 99;
+    display: block;
+  }
+  &::before {
+    left: 0;
+
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), darkorange);
+  }
+  &::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), darkorange);
+  }
   section {
     height: 100%;
     width: calc(120px * 8);
@@ -33,7 +55,7 @@
     align-items: center;
 
     // gap: 4rem;
-    animation: 10s slide infinite linear;
+    animation: 20s slide infinite linear;
 
     span {
       min-width: 120px;
