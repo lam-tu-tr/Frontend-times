@@ -11,14 +11,15 @@ export default function Footer() {
     <footer id={styles.footer}>
       <section id={styles.temp}>Contacts</section>
       <section id={styles.contact}>
-        <aside>
-          <HiMail className="w-10 h-10" />
-          <span>Lam.tu.tr@gmail.com</span>
-        </aside>
-        <aside>
+        <span>
+          <HiMail className="w-14 h-14" />
+          Lam.tu.tr@gmail.com
+        </span>
+
+        <span>
           <FaPhone className="w-10 h-10" />
-          <span>(669) - 246 2649</span>
-        </aside>
+          (669) - 246 2649
+        </span>
       </section>
       <section id={styles.social}>
         <FaGithub className="w-14 h-14" />

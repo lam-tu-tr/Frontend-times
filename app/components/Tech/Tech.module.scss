@@ -2,16 +2,18 @@
 
 #tech {
   grid-area: tech;
-  background-color: darkorange;
+  background-color: #f1f0e8;
 
   position: relative;
 
+  border-top: 0.2rem solid #41444b;
   @keyframes slide {
     0% {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-120px * 8));
+      //NOTE multiple length of logo container with number of logos
+      transform: translateX(calc(-120px * 9));
     }
   }
   &:hover {
@@ -23,7 +25,7 @@
   //Fade in and out left and right
   &::before,
   &::after {
-    background-color: darkorange;
+    background-color: #f1f0e8;
     position: absolute;
     top: 0;
     width: 30%;
@@ -35,15 +37,15 @@
   &::before {
     left: 0;
 
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), darkorange);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #f1f0e8);
   }
   &::after {
     right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), darkorange);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #f1f0e8);
   }
   section {
     height: 100%;
-    width: calc(120px * 8);
+    width: calc(120px * 9);
     display: flex;
     align-items: center;
 

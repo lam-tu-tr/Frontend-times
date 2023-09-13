@@ -72,19 +72,21 @@ body {
 //   div {
 //   }
 // }
+
+body {
+  background-color: #41444b;
+}
 html {
-  // height: 100svh;
   scroll-snap-type: y mandatory;
   scroll-padding-top: 5vh;
 }
 main,
 footer {
-  scroll-snap-align: start;
+  scroll-snap-align: center;
 }
 main {
-  // scroll-padding-top: 4rem;
-  background-color: black;
-  height: 95svh;
+  background-color: #41444b;
+  height: 94.5svh;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 2fr 2fr 2fr 1fr;

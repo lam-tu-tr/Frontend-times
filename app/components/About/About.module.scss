@@ -2,8 +2,26 @@
 
 #about {
   grid-area: about;
-  background-color: darksalmon;
+  background-color: #f1f0e8;
   padding: 3rem;
+  position: relative;
+  border-top: 0.2rem solid #41444b;
+  // border-top: 0.2rem solid #41444b;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 5% 100%, 0 90%, 0 0);
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 5%;
+    height: 10%;
+    background-color: #ff8787;
+    z-index: 4;
+    content: "";
+    border-right: 0.2rem solid #41444b;
+    border-top: 0.2rem solid #41444b;
+  }
   @include mixins.flexCenter();
   section {
     @include mixins.flexCenter();
