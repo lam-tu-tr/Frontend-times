@@ -1,14 +1,18 @@
-import React from "react";
+"use client";
+import { forwardRef } from "react";
 import styles from "./Footer.module.scss";
 
+//icons
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-
 import { FaPhone } from "react-icons/fa6";
 import { HiMail } from "react-icons/hi";
-export default function Footer() {
+
+interface ChildProps {}
+
+const Footer = forwardRef<HTMLElement, ChildProps>(({}, footerRef) => {
   return (
-    <footer id={styles.footer}>
+    <footer id={styles.footer} ref={footerRef}>
       <section id={styles.temp}>Contacts</section>
       <section id={styles.contact}>
         <span>
@@ -27,4 +31,8 @@ export default function Footer() {
       </section>
     </footer>
   );
-}
+});
+
+Footer.displayName = "Footer";
+
+export default Footer;

@@ -1,6 +1,7 @@
 @use "../../sass/mixins.scss";
 
 #footer {
+  grid-area: footer;
   height: 40svh;
   background-color: #f1f0e8;
   display: grid;
