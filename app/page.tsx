@@ -10,6 +10,13 @@ import Location from "./components/Location/Location";
 import Footer from "./components/Footer/Footer";
 import Nav from "./components/Nav/Nav";
 
+import { Press_Start_2P } from "next/font/google";
+
+const press_start = Press_Start_2P({
+  weight: "400",
+  subsets: ["latin"],
+});
+
 export default function Home() {
   //Create a ref so that the button in the connect Element
   //can scroll into view of the footer
@@ -24,14 +31,17 @@ export default function Home() {
 
   return (
     <div>
-      <h1>
-        <b>&#60;DAILY FRONTEND /&#62;</b>
-      </h1>
-      <section id="breaking_news">
-        <h2>BREAKING NEWS</h2>
-        <h2>BREAKING NEWS</h2>
+      <section id="title">
+        <h1 className={press_start.className}>
+          <b>&#60;DAILY FRONTEND /&#62;</b>
+        </h1>
+        <aside id="breaking_news">
+          <h2>BREAKING NEWS</h2>
+          <h2>BREAKING NEWS</h2>
+        </aside>
+        <Nav></Nav>
       </section>
-      <Nav></Nav>
+
       <main>
         <Intro />
         <About />
