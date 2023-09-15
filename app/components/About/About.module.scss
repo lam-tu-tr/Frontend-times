@@ -2,13 +2,13 @@
 
 #about {
   grid-area: about;
-  background-color: #f1f0e8;
+  background-color: var(--light-bg-color);
   padding: 3rem;
   position: relative;
-  border-top: 0.2rem solid #41444b;
-  // border-top: 0.2rem solid #41444b;
+  border-top: 0.2rem solid var(--light-font-color);
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 5% 100%, 0 90%, 0 0);
 
+  font-size: var(--font-size-large);
   &::after {
     position: absolute;
     bottom: 0;
@@ -19,8 +19,8 @@
     background-color: #ff8787;
     z-index: 4;
     content: "";
-    border-right: 0.2rem solid #41444b;
-    border-top: 0.2rem solid #41444b;
+    border-right: 0.2rem solid var(--light-font-color);
+    border-top: 0.2rem solid var(--light-font-color);
   }
   @include mixins.flexCenter();
   section {

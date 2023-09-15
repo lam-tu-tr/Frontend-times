@@ -2,11 +2,11 @@
 
 #tech {
   grid-area: tech;
-  background-color: #f1f0e8;
+  background-color: var(--light-bg-color);
 
   position: relative;
 
-  border-top: 0.2rem solid #41444b;
+  border-top: 0.2rem solid var(--light-font-color);
   @keyframes slide {
     0% {
       transform: translateX(0);
@@ -25,7 +25,7 @@
   //Fade in and out left and right
   &::before,
   &::after {
-    background-color: #f1f0e8;
+    background-color: var(--light-bg-color);
     position: absolute;
     top: 0;
     width: 30%;
@@ -37,11 +37,19 @@
   &::before {
     left: 0;
 
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), #f1f0e8);
+    background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0),
+      var(--light-bg-color)
+    );
   }
   &::after {
     right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), #f1f0e8);
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      var(--light-bg-color)
+    );
   }
   section {
     height: 100%;

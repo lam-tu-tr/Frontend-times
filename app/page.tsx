@@ -8,6 +8,7 @@ import Tech from "./components/Tech/Tech";
 import Connect from "./components/Connect/Connect";
 import Location from "./components/Location/Location";
 import Footer from "./components/Footer/Footer";
+import Nav from "./components/Nav/Nav";
 
 export default function Home() {
   //Create a ref so that the button in the connect Element
@@ -20,8 +21,13 @@ export default function Home() {
       footerRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }
+
   return (
     <div>
+      <h1>
+        <b>WELCOME</b>
+      </h1>
+      <Nav></Nav>
       <main>
         <Intro />
         <About />
