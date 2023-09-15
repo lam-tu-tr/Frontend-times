@@ -1,8 +1,9 @@
 @use "../../sass/mixins.scss";
 
 #footer {
+  grid-area: footer;
   height: 40svh;
-  background-color: #f1f0e8;
+  background-color: var(--light-bg-color);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
@@ -15,7 +16,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f1f0e8;
+    background-color: var(--light-bg-color);
   }
   section aside {
     flex-basis: 50%;
@@ -27,14 +28,14 @@
 
   #temp {
     grid-column: 1/8;
-    border-top: 0.2rem solid #41444b;
+    border-top: 0.2rem solid var(--light-font-color);
   }
   #contact {
     grid-column: 8/12;
     font-size: xx-large;
 
-    border-left: 0.2rem solid #41444b;
-    border-top: 0.2rem solid #41444b;
+    border-left: 0.2rem solid var(--light-font-color);
+    border-top: 0.2rem solid var(--light-font-color);
     padding: 3rem;
     span {
       width: 100%;
@@ -49,6 +50,6 @@
     flex-direction: column;
     justify-content: space-evenly;
 
-    border-left: 0.2rem solid #41444b;
+    border-left: 0.2rem solid var(--light-font-color);
   }
 }

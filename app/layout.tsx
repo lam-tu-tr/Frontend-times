@@ -1,10 +1,16 @@
 import "./globals.scss";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Nav from "./components/Nav/Nav";
-import Footer from "./components/Footer/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+import { Lexend_Deca } from "next/font/google";
+
+// const lexend_900 = Lexend_Deca({
+//   weight: "900",
+//   subsets: ["latin"],
+// });
+const lexend = Lexend_Deca({
+  weight: ["300", "400", "900"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Lam Tran Portfolio",
@@ -18,15 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <section>
-          <Nav></Nav>
-        </section>
-        <section>{children}</section>
-        <section>
-          <Footer></Footer>
-        </section>
-      </body>
+      <body className={lexend.className}>{children}</body>
     </html>
   );
 }
