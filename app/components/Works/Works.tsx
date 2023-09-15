@@ -7,7 +7,7 @@ import Link from "next/navigation";
 import ItineraryPNG from "../../assets/Itinerary.png";
 import KimNailsPNG from "../../assets/NailSalon.png";
 import PokedexPNG from "../../assets/Pokedex.png";
-import LamTypesPNG from "../../assets/Lamtypes.png";
+// import LamTypesPNG from "../../assets/Lamtypes.png";
 
 export default function Works() {
   const projectsData = [
@@ -38,15 +38,15 @@ export default function Works() {
         "Discover and learn about Pokémon like never before with our Pokedex web app - your portal to the Pokemon world",
       link: "Project 3",
     },
-    {
-      src: LamTypesPNG,
-      alt: "Project 4 Pic",
-      title: "Lam Types",
-      rating: 3,
-      description:
-        "Boost your touch typing skills with this speed test web app - assess your typing speed and accuracy",
-      link: "Project 4",
-    },
+    // {
+    //   src: LamTypesPNG,
+    //   alt: "Project 4 Pic",
+    //   title: "Lam Types",
+    //   rating: 3,
+    //   description:
+    //     "Boost your touch typing skills with this speed test web app - assess your typing speed and accuracy",
+    //   link: "Project 4",
+    // },
   ];
   const projects = projectsData.map((project, index) => {
     return (
