@@ -5,10 +5,20 @@
   align-items: center;
 }
 
-@mixin flex($direction, $justify, $item, $content) {
+@mixin flex($direction, $justify, $item) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $item;
-  align-content: $content;
+}
+
+@mixin infinite_scroll($width) {
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX($width);
+    }
+  }
 }
