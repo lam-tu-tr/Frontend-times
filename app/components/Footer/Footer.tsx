@@ -37,10 +37,6 @@ const Footer = forwardRef<HTMLElement, ChildProps>(({}, footerRef) => {
             <BsMailbox2 className="w-10 h-10" />
             Lam.tu.tr@gmail.com
           </span>
-          <span>
-            <FaSquarePhone className="w-10 h-10" />
-            (669) - 246 2649
-          </span>
         </aside>
       </section>
       <section id={styles.social}>
