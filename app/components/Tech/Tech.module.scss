@@ -1,4 +1,8 @@
 //
+@use "../../sass/mixins.scss";
+
+//NOTE multiple length of logo container with number of logos
+@include mixins.infinite_scroll(calc(-120px * 9));
 
 #tech {
   grid-area: tech;
@@ -7,15 +11,7 @@
   position: relative;
 
   border-top: 0.2rem solid var(--light-font-color);
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      //NOTE multiple length of logo container with number of logos
-      transform: translateX(calc(-120px * 9));
-    }
-  }
+
   &:hover {
     section {
       animation-play-state: paused;
@@ -57,15 +53,11 @@
     display: flex;
     align-items: center;
 
-    // gap: 4rem;
     animation: 15s slide infinite linear;
-
     span {
       min-width: 120px;
-      // min-height: 60px;
       flex-shrink: 0;
       text-align: center;
-      // background-color: aquamarine;
     }
   }
 }

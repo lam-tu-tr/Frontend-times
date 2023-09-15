@@ -25,8 +25,12 @@ export default function Home() {
   return (
     <div>
       <h1>
-        <b>WELCOME</b>
+        <b>&#60;DAILY FRONTEND /&#62;</b>
       </h1>
+      <section id="breaking_news">
+        <h2>BREAKING NEWS</h2>
+        <h2>BREAKING NEWS</h2>
+      </section>
       <Nav></Nav>
       <main>
         <Intro />

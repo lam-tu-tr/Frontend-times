@@ -23,12 +23,12 @@
     width: 100%;
     @include mixins.flexCenter();
     background-color: coral;
-    // border-radius: 0 0 2rem 2rem;
   }
 
-  #temp {
+  #form {
     grid-column: 1/8;
     border-top: 0.2rem solid var(--light-font-color);
+    font-size: 3rem;
   }
   #contact {
     grid-column: 8/12;
