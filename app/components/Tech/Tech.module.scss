@@ -33,19 +33,11 @@
   &::before {
     left: 0;
 
-    background: linear-gradient(
-      to left,
-      rgba(255, 255, 255, 0),
-      var(--light-bg-color)
-    );
+    background: linear-gradient(to left, #f1f0e800, var(--light-bg-color));
   }
   &::after {
     right: 0;
-    background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0),
-      var(--light-bg-color)
-    );
+    background: linear-gradient(to right, #f1f0e800, var(--light-bg-color));
   }
   section {
     height: 100%;
