@@ -1,6 +1,6 @@
 import "./globals.scss";
 import type { Metadata } from "next";
-
+import { Analytics } from "@vercel/analytics/react";
 import { Lexend_Deca, Inconsolata } from "next/font/google";
 
 // const lexend_900 = Lexend_Deca({
@@ -26,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inconsolata.className}>{children}</body>
+      <Analytics />
     </html>
   );
 }
