@@ -75,7 +75,7 @@ export default function Works() {
   });
   return (
     <section id={styles.works}>
-      <h1>My Works</h1>
+      <h2>Works</h2>
       <ul>{projects}</ul>
     </section>
   );

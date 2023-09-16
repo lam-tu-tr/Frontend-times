@@ -79,8 +79,6 @@ body {
 //   }
 // }
 html {
-}
-html {
   // background-color: #41444b;
   position: relative;
   &::before {
@@ -103,9 +101,11 @@ html {
 
 #title {
   h1 {
-    font-size: 15svw;
-    padding-left: 2rem;
+    font-size: 14svw;
+    padding: 3rem;
     background-color: var(--light-bg-color);
+    line-height: 1;
+    text-align: end;
   }
   #breaking_news {
     display: flex;
@@ -114,7 +114,7 @@ html {
     h2 {
       min-width: 100svw;
       color: #e97777;
-      font-size: 10vw;
+      font-size: 8vw;
       font-weight: 900;
       background-color: var(--light-bg-color);
       border-top: 0.2rem solid var(--light-font-color);
@@ -133,7 +133,7 @@ main {
   height: 100svh;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 3fr 3fr 3fr 0.5fr;
+  grid-template-rows: 3fr 3fr 3fr 1fr;
   grid-template-areas:
     "intro intro intro intro works works"
     "intro intro intro intro works works"
