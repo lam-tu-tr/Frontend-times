@@ -26,6 +26,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  line-height: normal;
   font-size: var(--font-size-medium);
 }
 * {
@@ -77,11 +78,9 @@ body {
 //   div {
 //   }
 // }
-html {
-  scroll-snap-type: y mandatory;
-}
+
 body {
-  background-color: #41444b;
+  // background-color: #41444b;
   position: relative;
   &::before {
     position: absolute;
@@ -94,7 +93,7 @@ body {
     background-image: url("./assets/paper-texture.jpg");
     mix-blend-mode: multiply;
     pointer-events: none;
-    z-index: 99;
+    z-index: 100;
     content: "";
   }
   @include mixins.infinite_scroll(-100svw);
@@ -102,47 +101,33 @@ body {
 }
 
 #title {
-  scroll-snap-align: start;
+  h1 {
+    font-size: 15svw;
+    padding-left: 2rem;
+    background-color: var(--light-bg-color);
+  }
   #breaking_news {
-    height: 100%;
-
     display: flex;
-    align-items: center;
-    background-color: aqua;
+    flex-direction: row;
     animation: 3s slide infinite linear;
     h2 {
       min-width: 100svw;
-      height: 100%;
       color: #e97777;
+      font-size: 10vw;
+      font-weight: 900;
+      background-color: var(--light-bg-color);
+      border-top: 0.2rem solid var(--light-font-color);
     }
   }
 }
 
-footer {
-  scroll-snap-align: end;
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-h1,
-h2 {
-  width: 100%;
-  font-size: 8svw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--light-bg-color);
-  line-height: 1;
-}
-h1 {
-  height: 50svh;
-  padding-left: 2rem;
-}
-h2 {
-  height: 40svh;
-  font-size: 10vw;
-  border-top: 0.2rem solid var(--light-font-color);
-}
 main {
-  scroll-snap-align: end;
   background-color: var(--light-font-color);
   height: 100svh;
   display: grid;
@@ -153,5 +138,4 @@ main {
     "intro intro intro intro works works"
     "extra about about about works works"
     "extra tech tech tech tech connect";
-  overflow-x: hidden;
 }

@@ -13,10 +13,8 @@ export default function Connect({
     <section id={styles.connect}>
       <button onClick={scrollToFooter} type="button">
         <span className="mr-4">Get In Touch</span>
-      </button>
-      <div onClick={() => {}}>
         <BiSolidDownvote className="w-10 h-10" />
-      </div>
+      </button>
     </section>
   );
 }
