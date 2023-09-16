@@ -32,9 +32,7 @@ export default function Home() {
   return (
     <div>
       <section id="title">
-        <h1 className={press_start.className}>
-          <b>&#60;DAILY FRONTEND /&#62;</b>
-        </h1>
+        <h1>&#60;DAILY FRONTEND /&#62;</h1>
         <aside id="breaking_news">
           <h2>BREAKING NEWS</h2>
           <h2>BREAKING NEWS</h2>
