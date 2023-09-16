@@ -78,8 +78,9 @@ body {
 //   div {
 //   }
 // }
-
-body {
+html {
+}
+html {
   // background-color: #41444b;
   position: relative;
   &::before {
@@ -121,7 +122,7 @@ body {
   }
 }
 
-.sticky {
+.sticky nav {
   position: fixed;
   top: 0;
   width: 100%;
