@@ -4,20 +4,25 @@
   grid-area: connect;
   background-color: var(--light-bg-color);
   z-index: 10;
-  display: flex;
-  flex-direction: row;
 
   border-left: 0.2rem solid var(--light-font-color);
   border-top: 0.2rem solid var(--light-font-color);
-  font-size: xx-large;
-  @include mixins.flexCenter();
+
+  padding: 0 1rem;
   button {
     height: 100%;
-    flex-basis: 50%;
-  }
-  div {
-    height: 100%;
-    flex-basis: 50%;
-    @include mixins.flexCenter;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      font-size: clamp(12px, 2vw, 40px);
+
+      // white-space: nowrap;
+    }
+    span:nth-child(2) {
+      flex-shrink: 0;
+    }
   }
 }
