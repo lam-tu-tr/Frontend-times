@@ -4,6 +4,8 @@ import styles from "./Works.module.scss";
 import Image from "next/image";
 import Link from "next/navigation";
 
+import { BsStar } from "react-icons/bs";
+
 import ItineraryPNG from "../../assets/Itinerary.png";
 import KimNailsPNG from "../../assets/NailSalon.png";
 import PokedexPNG from "../../assets/Pokedex.png";
@@ -50,8 +52,8 @@ export default function Works() {
   ];
   const projects = projectsData.map((project, index) => {
     return (
-      <li key={index}>
-        <div>
+      <li key={index} className={styles.element}>
+        <div id={styles.project_pic}>
           <Image
             src={project.src}
             alt={project.alt}
@@ -59,24 +61,26 @@ export default function Works() {
             // sizes="60svw"
             style={{ objectFit: "contain" }}
           ></Image>
+          temp
         </div>
-        <div>
-          <article>
-            <h3>{project.title}</h3>
-
-            <aside>Free Shipping</aside>
-
-            <p>{project.description}</p>
-          </article>
-          {/* <p>{project.rating}</p> */}
-        </div>
+        {/* <div id={styles.project_description}>
+          <h4>{project.title}</h4>
+          <aside>
+            <BsStar className="w-6 h-6" />
+            <BsStar className="w-6 h-6" />
+            <BsStar className="w-6 h-6" />
+            <BsStar className="w-6 h-6" />
+            <BsStar className="w-6 h-6" />
+          </aside>
+          <p>{project.description}</p>
+        </div> */}
       </li>
     );
   });
   return (
     <section id={styles.works}>
-      <h2>Works</h2>
-      <ul>{projects}</ul>
+      <h3>Works</h3>
+      <ul className={styles.scroll_container}>{projects}</ul>
     </section>
   );
 }
