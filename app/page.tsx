@@ -14,7 +14,6 @@ import { Gasoek_One } from "next/font/google";
 
 const press_start = Gasoek_One({
   weight: "400",
-  subsets: ["latin"],
 });
 
 export default function Home() {

@@ -9,7 +9,7 @@ import { BsStar } from "react-icons/bs";
 import ItineraryPNG from "../../assets/Itinerary.png";
 import KimNailsPNG from "../../assets/NailSalon.png";
 import PokedexPNG from "../../assets/Pokedex.png";
-import LamTypesPNG from "../../assets/Lamtypes.png";
+import LamTypesPNG from "../../assets/LamTypes.png";
 
 const projectsData = [
   {
