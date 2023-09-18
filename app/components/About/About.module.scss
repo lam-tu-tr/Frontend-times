@@ -3,7 +3,6 @@
 #about {
   grid-area: about;
   background-color: var(--light-bg-color);
-  padding: 3rem;
   position: relative;
   border-top: 0.2rem solid var(--light-font-color);
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 5% 100%, 0 90%, 0 0);
@@ -22,8 +21,18 @@
     border-right: 0.2rem solid var(--light-font-color);
     border-top: 0.2rem solid var(--light-font-color);
   }
-  @include mixins.flexCenter();
-  section {
-    @include mixins.flexCenter();
+  display: flex;
+  flex-direction: column;
+  h3 {
+    width: 100%;
+    // padding: 1rem;
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 1.5rem;
+  }
+  p {
+    padding: 0 3rem;
+    padding-bottom: 3rem;
   }
 }

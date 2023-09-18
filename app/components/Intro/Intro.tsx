@@ -2,18 +2,26 @@ import React from "react";
 import Image from "next/image";
 import styles from "./Intro.module.scss";
 
-import LamTypesPNG from "../../assets/Lamtypes.png";
+import Avatar from "../../assets/Avatar.jpeg";
 
 export default function Intro() {
   return (
     <div id={styles.intro}>
-      <section>
-        <p>
-          Welcome to my web development portfolio! I&apos;m a dedicated frontend
-          developer focused on creating seamless user experiences that transform
-          digital concepts into reality.
-        </p>
-      </section>
+      <div>
+        <Image
+          src={Avatar}
+          alt={"Avatar"}
+          fill={true}
+          // sizes="60svw"
+          style={{ objectFit: "contain" }}
+        ></Image>
+      </div>
+      <p>
+        <b>Meet Lam</b>, the emerging electrical engineer turned front-end
+        developer who thrives on the excitement of transforming digital UI/UX
+        designs into tangible and seamless digital experience. He is set to make
+        waves in the tech industry.
+      </p>
     </div>
   );
 }
