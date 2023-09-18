@@ -10,11 +10,11 @@ import Location from "./components/Location/Location";
 import Footer from "./components/Footer/Footer";
 import Nav from "./components/Nav/Nav";
 
-import { Gasoek_One } from "next/font/google";
+// import { Gasoek_One } from "next/font/google";
 
-const press_start = Gasoek_One({
-  weight: "400",
-});
+// const press_start = Gasoek_One({
+//   weight: "400",
+// });
 
 export default function Home() {
   //Create a ref so that the button in the connect Element
@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <div>
       <section id="title">
-        <h1 className={press_start.className}>&#60;FRONTEND TIMES /&#62;</h1>
+        <h1>&#60;FRONTEND TIMES /&#62;</h1>
         <aside id="breaking_news">
           <h2>BREAKING NEWS</h2>
           <h2>BREAKING NEWS</h2>
