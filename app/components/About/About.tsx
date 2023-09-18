@@ -4,15 +4,18 @@ import styles from "./About.module.scss";
 export default function About() {
   return (
     <section id={styles.about}>
-      <div>
-        After years of designing circuits and systems, Sarah has embarked on an
-        exciting journey into the world of frontend web development. Armed with
-        her analytical mindset and a deep appreciation for precision, she&apos;s
-        now channeling her technical expertise into crafting seamless user
-        interfaces and interactive web experiences. Sarah&apos;s transition
-        reflects her unwavering commitment to mastering new skills and her drive
-        to contribute to the ever-evolving digital landscape.
-      </div>
+      <h3>About</h3>
+      <p>
+        With a background in electrical engineering, Lam brings a unique
+        perspective to the world of front-end development. His expertise in
+        problem-solving and attention to detail, honed through years of working
+        with complex circuits and systems, has seamlessly translated into his
+        ability to tackle intricate coding challenges. Lam&apos;s transition
+        into the world of digital user interfaces has been nothing short of
+        remarkable, showcasing his adaptability and passion for transforming
+        designs into functional, aesthetically pleasing websites and
+        applications.
+      </p>
     </section>
   );
 }

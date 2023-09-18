@@ -1,7 +1,6 @@
 @use "../../sass/mixins.scss";
 
 #intro {
-  // height: 80svh;
   grid-area: intro;
   background-color: var(--light-bg-color);
   padding: 5rem;
@@ -9,10 +8,14 @@
 
   clip-path: polygon(0 0, 100% 0%, 100% 85%, 85% 100%, 0 100%, 0 0);
   position: relative;
-  @include mixins.flexCenter();
-  section {
-    @include mixins.flexCenter();
+  display: flex;
+  flex-direction: row;
+  div {
+    flex: 0 0 40%;
+
+    position: relative;
   }
+  //corner fold
   &::after {
     position: absolute;
     bottom: 0;
