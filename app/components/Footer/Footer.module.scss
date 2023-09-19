@@ -19,6 +19,14 @@
     flex-grow: 4;
     border-top: 0.2rem solid var(--light-font-color);
     font-size: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    aside {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   #contact {

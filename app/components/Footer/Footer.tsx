@@ -16,11 +16,19 @@ import pointer from "../../assets/icons/pointing-cursor.svg";
 const Footer = forwardRef<HTMLElement, ChildProps>(({}, footerRef) => {
   return (
     <footer id={styles.footer} ref={footerRef}>
-      <section id={styles.form}>
-        {/* <form action="temp">
-        </form> */}
-        Contact
-      </section>
+      <form action="submit" id={styles.form}>
+        <aside>
+          <input placeholder="@gmail.com" type="text" />
+          <input placeholder="Subject2" type="text" />
+        </aside>
+        <textarea
+          name="mail-body"
+          id="mail-body"
+          cols={15}
+          rows={5}
+          placeholder="Write a message"
+        ></textarea>
+      </form>
 
       <section id={styles.contact}>
         <aside id={styles.ad}>
