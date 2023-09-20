@@ -130,13 +130,17 @@ html {
 
 main {
   background-color: var(--light-font-color);
-  height: 100svh;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 3fr 3fr 3fr 1fr;
-  grid-template-areas:
-    "intro intro intro intro works works"
-    "intro intro intro intro works works"
-    "extra about about about works works"
-    "extra tech tech tech tech connect";
+
+  display: flex;
+  flex-direction: column;
+  // height: 100svh;
+
+  // display: grid;
+  // grid-template-columns: repeat(6, 1fr);
+  // grid-template-rows: 3fr 3fr 3fr 1fr;
+  // grid-template-areas:
+  //   "intro intro intro intro works works"
+  //   "intro intro intro intro works works"
+  //   "extra about about about works works"
+  //   "extra tech tech tech tech connect";
 }
