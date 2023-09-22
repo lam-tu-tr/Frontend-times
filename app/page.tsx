@@ -8,6 +8,7 @@ import Tech from "./components/Tech/Tech";
 import Footer from "./components/Footer/Footer";
 
 import { Passion_One } from "next/font/google";
+import Advertisement from "./components/Advertisement/Advertisement";
 
 const passion_one = Passion_One({
   weight: "400",
@@ -30,17 +31,19 @@ export default function Home() {
     <>
       <header>
         <h1 className={passion_one.className}>&#60;FRONTEND TIMES /&#62;</h1>
+
+        <Nav></Nav>
         <aside id="breaking_news">
           <h2>BREAKING NEWS</h2>
           <h2>BREAKING NEWS</h2>
         </aside>
-        <Nav></Nav>
       </header>
 
       <main>
         <Intro />
         <Editorial />
         <Tech />
+        <Advertisement />
       </main>
 
       <Footer ref={footerRef} />

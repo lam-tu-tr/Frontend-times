@@ -1,52 +1,53 @@
 //
 @use "../../sass/mixins.scss";
 
-//* NOTE multiple length of logo container with number of logos
-@include mixins.infinite_scroll(calc(-120px * 10));
+//* NOTE multiply length of each logo container with number of logos
+//* 40px + 10px(margin)*2 = 60
+@include mixins.infinite_scroll(calc(-60px * 10));
 
-#tech {
-  background-color: var(--light-bg-color);
-
-  position: relative;
-  border-top: 0.2rem solid var(--light-font-color);
-
-  //TODO Convert hover to jQuery syntax
-  &:hover {
-    section {
-      animation-play-state: paused;
+#tech_container {
+  //
+  #tech {
+    margin-top: 1em;
+    position: relative;
+    //TODO Convert hover to jQuery syntax
+    &:hover {
+      section {
+        animation-play-state: paused;
+      }
     }
-  }
 
-  //* Fade object styling
-  &::before,
-  &::after {
-    background-color: var(--light-bg-color);
-    position: absolute;
-    top: 0;
-    width: 30%;
-    height: 100%;
-    content: "";
-    z-index: 99;
-    display: block;
-  }
+    //* Fade object styling
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      width: 30%;
+      height: 100%;
+      content: "";
+      z-index: 99;
+    }
 
-  //*Fade object blend mode
-  &::before {
-    left: 0;
-    background: linear-gradient(to left, #f1f0e800, var(--light-bg-color));
-  }
-  &::after {
-    right: 0;
-    background: linear-gradient(to right, #f1f0e800, var(--light-bg-color));
-  }
+    //*Fade object blend mode
+    &::before {
+      left: 0;
+      background: linear-gradient(to left, #ffffff00, white);
+    }
+    &::after {
+      right: 0;
+      background: linear-gradient(to right, #ffffff00, white);
+    }
 
-  section {
-    display: flex;
-    flex-direction: row;
-    animation: 15s slide infinite linear;
+    section {
+      display: flex;
+      flex-direction: row;
+      animation: 10s slide infinite linear;
 
-    span {
-      min-width: 120px;
+      span {
+        min-width: 40px;
+        min-height: 40px;
+        margin: 0 10px;
+      }
     }
   }
 }

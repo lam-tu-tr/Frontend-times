@@ -44,11 +44,11 @@ export default function Nav() {
 
   return (
     <nav id={style.nav} ref={navRef}>
-      <ul>
+      {/* <ul>
         <li>-Home-</li>
         <li>-More About me-</li>
         <li>-Project Details-</li>
-      </ul>
+      </ul> */}
       <aside>
         <span>Language</span>
         <span>

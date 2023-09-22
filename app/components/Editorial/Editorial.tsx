@@ -4,8 +4,6 @@ import styles from "./Editorial.module.scss";
 import Image from "next/image";
 import Link from "next/navigation";
 
-import { BsStar } from "react-icons/bs";
-
 import ItineraryPNG from "../../assets/Itinerary.png";
 import KimNailsPNG from "../../assets/NailSalon.png";
 import PokedexPNG from "../../assets/Pokedex.png";
@@ -70,7 +68,7 @@ export default function Works() {
     );
   });
   return (
-    <section id={styles.works}>
+    <section id={styles.works} className="top_border">
       <h3>Works</h3>
       <ul className={styles.scroll_container}>{projects}</ul>
     </section>

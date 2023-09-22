@@ -1,21 +1,10 @@
 @use "./sass/mixins.scss";
+@use "./sass/style_reset.scss";
+@use "./sass/size_color.scss";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --spacing-xsmall: 4px;
-  --spacing-small: 8px;
-  --spacing-medium: 16px;
-  --spacing-large: 32px;
-  --spacing-xlarge: 64px;
-
-  --font-size-small: 12px;
-  --font-size-medium: 16px;
-  --font-size-large: 24px;
-  --font-size-xlarge: 48px;
-}
 
 :root {
   --light-bg-color: #f1f0e8;
@@ -32,29 +21,7 @@
 * {
   color: var(--light-font-color);
 }
-/* screens: {
 
-  'xxsm': '280px',
-  // => @media (min-width: 280px) { ... }
-
-  'xsm': '320px',
-  // => @media (min-width: 320px) { ... }
-
-  'sm': '640px',
-  // => @media (min-width: 640px) { ... }
-
-  'md': '768px',
-  // => @media (min-width: 768px) { ... }
-
-  'lg': '1024px',
-  // => @media (min-width: 1024px) { ... }
-
-  'xl': '1280px',
-  // => @media (min-width: 1280px) { ... }
-
-  '2xl': '1536px',
-  // => @media (min-width: 1536px) { ... }
-} */
 /*
 @media (prefers-color-scheme: dark) {
   :root {
@@ -85,7 +52,8 @@ body {
   overflow-x: hidden;
 }
 html {
-  //Paper texture overlay
+  // background-color: #41444b;
+  position: relative;
   &::before {
     position: absolute;
     top: 0;
@@ -100,8 +68,9 @@ html {
     z-index: 100;
     content: "";
   }
+  @include mixins.infinite_scroll(-100svw);
+  overflow-x: hidden;
 }
-
 header {
   #breaking_news {
     display: flex;
@@ -112,8 +81,6 @@ header {
       color: #e97777;
       font-size: 8vw;
       font-weight: 900;
-      background-color: var(--light-bg-color);
-      border-top: 0.2rem solid var(--light-font-color);
     }
   }
 }
@@ -125,17 +92,38 @@ header {
 }
 
 main {
-  background-color: var(--light-font-color);
   display: flex;
   flex-direction: column;
 }
 
 h1 {
   font-size: 14svw;
-  padding: 3rem;
-  background-color: var(--light-bg-color);
-  line-height: 1;
-  text-align: end;
+  padding: 0 1em;
+  font-weight: 900;
 }
-h2 {
+
+.container {
+  padding: 0 1em;
+  margin: 0 auto;
+  max-width: var(--display-desktop);
+}
+.img_container {
+  max-width: 100%;
+}
+
+.top_border {
+  position: relative;
+  padding: 1em 0;
+  margin-top: 1em;
+  &::before {
+    margin: 0 1em;
+    height: 1em;
+    width: calc(100% - 2em);
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    z-index: 99;
+    border-top: 2px solid black;
+  }
 }
