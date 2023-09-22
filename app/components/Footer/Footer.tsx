@@ -47,6 +47,7 @@ const Footer = forwardRef<HTMLElement, ChildProps>(({}, footerRef) => {
           </span>
         </aside>
       </section>
+
       <section id={styles.social}>
         <FaGithub className="w-10 h-10" />
         <FaLinkedin className="w-10 h-10" />

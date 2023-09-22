@@ -78,9 +78,14 @@ body {
 //   div {
 //   }
 // }
-html {
-  // background-color: #41444b;
+
+html,
+body {
   position: relative;
+  overflow-x: hidden;
+}
+html {
+  //Paper texture overlay
   &::before {
     position: absolute;
     top: 0;
@@ -95,18 +100,9 @@ html {
     z-index: 100;
     content: "";
   }
-  @include mixins.infinite_scroll(-100svw);
-  overflow-x: hidden;
 }
 
-#title {
-  h1 {
-    font-size: 14svw;
-    padding: 3rem;
-    background-color: var(--light-bg-color);
-    line-height: 1;
-    text-align: end;
-  }
+header {
   #breaking_news {
     display: flex;
     flex-direction: row;
@@ -130,17 +126,16 @@ html {
 
 main {
   background-color: var(--light-font-color);
-
   display: flex;
   flex-direction: column;
-  // height: 100svh;
+}
 
-  // display: grid;
-  // grid-template-columns: repeat(6, 1fr);
-  // grid-template-rows: 3fr 3fr 3fr 1fr;
-  // grid-template-areas:
-  //   "intro intro intro intro works works"
-  //   "intro intro intro intro works works"
-  //   "extra about about about works works"
-  //   "extra tech tech tech tech connect";
+h1 {
+  font-size: 14svw;
+  padding: 3rem;
+  background-color: var(--light-bg-color);
+  line-height: 1;
+  text-align: end;
+}
+h2 {
 }

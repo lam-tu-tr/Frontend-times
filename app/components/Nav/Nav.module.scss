@@ -2,27 +2,22 @@
 
 #nav {
   background-color: #95bdff;
-  width: 100%;
-  height: 8svh;
+  height: 5svh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-top: 0.2rem solid var(--light-font-color);
   border-bottom: 0.2rem solid var(--light-font-color);
 
-  font-size: large;
-  font-weight: 600;
-
   z-index: 100;
   ul {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    height: 100%;
 
     li {
       @include mixins.flexCenter();
-      margin-left: 5rem;
+      margin-left: 2rem;
     }
   }
   aside {
@@ -33,13 +28,13 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      padding: 0 2rem;
+      padding: 0 1rem;
       border-left: 0.2rem solid var(--light-font-color);
     }
   }
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
+  // .sticky {
+  //   position: fixed;
+  //   top: 0;
+  //   width: 100%;
+  // }
 }

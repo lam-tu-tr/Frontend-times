@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import styles from "./Works.module.scss";
+import styles from "./Editorial.module.scss";
 import Image from "next/image";
 import Link from "next/navigation";
 
@@ -50,11 +50,9 @@ const projectsData = [
   },
 ];
 export default function Works() {
-  const [currentCard, setCurrentCard] = useState<Object>({});
-
   const projects = projectsData.map((project, index) => {
     return (
-      <li key={index} className={styles.card}>
+      <li key={index} id={styles.card}>
         <div id={styles.project_pic}>
           <Image
             src={project.src}
@@ -66,13 +64,6 @@ export default function Works() {
         </div>
         <div id={styles.project_description}>
           <h4>{project.title}</h4>
-          <aside>
-            <BsStar className="w-6 h-6" />
-            <BsStar className="w-6 h-6" />
-            <BsStar className="w-6 h-6" />
-            <BsStar className="w-6 h-6" />
-            <BsStar className="w-6 h-6" />
-          </aside>
           <p>{project.description}</p>
         </div>
       </li>

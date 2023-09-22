@@ -8,6 +8,7 @@ export default function Nav() {
 
   const [navOffset, setNavOffset] = useState<number | null>(null);
 
+  //* Recalculate Y of Nav to Top on screen resize
   useEffect(() => {
     function updateNavOffset() {
       setNavOffset(navRef.current?.offsetTop || null);
@@ -22,8 +23,8 @@ export default function Nav() {
     };
   }, []);
 
+  //* Auto sticky nav when screen scrolls past Nav
   useEffect(() => {
-    // const navOffset = navRef.current?.offsetTop;
     function navStickyScroll() {
       if (navOffset !== null && window.scrollY >= navOffset) {
         document.body.classList.add("sticky");
