@@ -2,14 +2,18 @@
 
 #intro {
   padding: 1em;
-  // margin-top: 1em;
 
   position: relative;
   display: flex;
   flex-direction: column;
 
+  h2 {
+    padding: 0;
+    line-height: 2.2rem;
+  }
   #profile_pic {
     aspect-ratio: 3/2;
     position: relative;
+    margin: 1rem 0;
   }
 }

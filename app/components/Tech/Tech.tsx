@@ -17,7 +17,7 @@ export default function Tech() {
   const logos = [html, css, sass, js, ts, next, node, express, prisma, figma];
   return (
     <div id={style.tech_container} className="top_border">
-      <h2>Current Technologies</h2>
+      <h3>Current Technologies</h3>
       <div id={style.tech}>
         <section>
           {logos.map((tech, index) => {

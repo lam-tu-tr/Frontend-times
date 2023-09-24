@@ -8,7 +8,7 @@
 #tech_container {
   //
   #tech {
-    margin-top: 1em;
+    margin-top: var(--spacing-mobile);
     position: relative;
     //TODO Convert hover to jQuery syntax
     &:hover {

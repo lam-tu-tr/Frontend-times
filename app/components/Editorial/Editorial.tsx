@@ -51,7 +51,7 @@ export default function Works() {
   const projects = projectsData.map((project, index) => {
     return (
       <li key={index} id={styles.card}>
-        <div id={styles.project_pic}>
+        <div id={styles.project_pic} className="img_container">
           <Image
             src={project.src}
             alt={project.alt}

@@ -2,6 +2,12 @@
 
 #header {
   @include mixins.infinite_scroll(-100svw);
+
+  section {
+    h3 {
+      text-align: center;
+    }
+  }
   #breaking_news {
     display: flex;
     flex-direction: row;
@@ -10,8 +16,9 @@
     h2 {
       min-width: 100svw;
       color: #e97777;
-      font-size: 8vw;
+      line-height: normal;
       font-weight: 900;
+      display: flex;
     }
   }
 }

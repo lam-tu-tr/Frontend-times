@@ -6,7 +6,7 @@
 
   ul {
     //*
-    padding: 0 1em;
+    padding: 1rem;
 
     //* Horizontal scroll settings
     display: grid;
@@ -33,7 +33,6 @@
     }
 
     #card {
-      padding-bottom: 2rem;
       display: flex;
       flex-direction: column;
 

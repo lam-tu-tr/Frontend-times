@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 import { forwardRef } from "react";
 import styles from "./Footer.module.scss";
 
@@ -11,12 +9,11 @@ import { FaSquarePhone } from "react-icons/fa6";
 import { BsMailbox2 } from "react-icons/bs";
 
 interface ChildProps {}
-import pointer from "../../assets/icons/pointing-cursor.svg";
 
 const Footer = forwardRef<HTMLElement, ChildProps>(({}, footerRef) => {
   return (
     <footer id={styles.footer} ref={footerRef}>
-      <h2>&#60;FRONTEND TIMES /&#62;</h2>
+      <h3>&#60;FRONTEND TIMES /&#62;</h3>
       {/* <form action="submit" id={styles.form}>
         <aside>
           <input placeholder="@gmail.com" type="text" />
@@ -32,26 +29,21 @@ const Footer = forwardRef<HTMLElement, ChildProps>(({}, footerRef) => {
       </form> */}
 
       <section id={styles.contact}>
-        <aside id={styles.ad}>
-          <Image
-            src={pointer}
-            alt="pointer"
-            className="w-12 scale-x-[-100%] fill-blue-500"
-          />
-          <span>Your Website Here</span>
-          <Image src={pointer} alt="pointer" className="w-12" />
-        </aside>
         <aside id={styles.info}>
           <span>
             <BsMailbox2 className="w-10 h-10" />
-            Lam.tu.tr@gmail.com
           </span>
+          <span>Lam.tu.tr@gmail.com</span>
         </aside>
       </section>
 
       <section id={styles.social}>
-        <FaGithub className="w-10 h-10" />
-        <FaLinkedin className="w-10 h-10" />
+        <span>
+          <FaGithub className="w-8 h-8" />
+        </span>
+        <span>
+          <FaLinkedin className="w-8 h-8" />
+        </span>
       </section>
     </footer>
   );

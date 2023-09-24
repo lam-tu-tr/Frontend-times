@@ -6,11 +6,16 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  color: var(--light-font-color);
+}
 html,
 body {
   position: relative;
   overflow-x: hidden;
 }
+
+//* Background paper texture
 html {
   position: relative;
   &::before {
@@ -50,27 +55,27 @@ h3 {
 }
 
 h1 {
-  padding: 0 1rem;
+  padding: var(--spacing-mobile);
   font-size: calc(var(--font-size-xlarge));
 }
 h2 {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-xlarge);
 }
 h3 {
   font-size: var(--font-size-large);
 }
 .img_container {
   max-width: 100%;
+  display: block;
 }
 
 //* Set separation lines between content sections
 .top_border {
   position: relative;
-  padding: 1em 0;
+  padding: var(--spacing-mobile) 0;
   &::before {
-    margin: 0 1em;
-    height: 1em;
-    width: calc(100% - 2em);
+    margin: 0 var(--spacing-mobile);
+    width: calc(100% - 2 * var(--spacing-mobile));
     position: absolute;
     top: 0;
     left: 0;

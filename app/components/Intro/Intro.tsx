@@ -9,13 +9,12 @@ export default function Intro() {
     <div id={styles.intro} className=" top_border">
       <h2>New Bay Area player set to make waves in the tech industry.</h2>
 
-      <div id={styles.profile_pic}>
+      <div id={styles.profile_pic} className="img_container">
         <Image
           src={Avatar}
           alt={"Avatar"}
           fill={true}
-          // sizes="60svw"
-          style={{ objectFit: "contain" }}
+          style={{ objectFit: "cover" }}
         ></Image>
       </div>
 
