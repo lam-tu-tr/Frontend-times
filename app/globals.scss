@@ -6,53 +6,12 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --light-bg-color: #f1f0e8;
-  --light-font-color: #41444b;
-  --dark-bg-color: ;
-  --dark-font-color: ;
-
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  line-height: normal;
-  font-size: var(--font-size-medium);
-}
-* {
-  color: var(--light-font-color);
-}
-
-/*
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
-// body {
-//   // overflow-y: scroll;
-//   div {
-//   }
-// }
-
 html,
 body {
   position: relative;
   overflow-x: hidden;
 }
 html {
-  // background-color: #41444b;
   position: relative;
   &::before {
     position: absolute;
@@ -68,21 +27,8 @@ html {
     z-index: 100;
     content: "";
   }
-  @include mixins.infinite_scroll(-100svw);
+
   overflow-x: hidden;
-}
-header {
-  #breaking_news {
-    display: flex;
-    flex-direction: row;
-    animation: 3s slide infinite linear;
-    h2 {
-      min-width: 100svw;
-      color: #e97777;
-      font-size: 8vw;
-      font-weight: 900;
-    }
-  }
 }
 
 .sticky nav {
@@ -96,25 +42,31 @@ main {
   flex-direction: column;
 }
 
-h1 {
-  font-size: 14svw;
-  padding: 0 1em;
+h1,
+h2,
+h3 {
   font-weight: 900;
+  padding: 0 1rem;
 }
 
-.container {
-  padding: 0 1em;
-  margin: 0 auto;
-  max-width: var(--display-desktop);
+h1 {
+  padding: 0 1rem;
+  font-size: calc(var(--font-size-xlarge));
+}
+h2 {
+  font-size: var(--font-size-large);
+}
+h3 {
+  font-size: var(--font-size-large);
 }
 .img_container {
   max-width: 100%;
 }
 
+//* Set separation lines between content sections
 .top_border {
   position: relative;
   padding: 1em 0;
-  margin-top: 1em;
   &::before {
     margin: 0 1em;
     height: 1em;
