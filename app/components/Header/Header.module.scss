@@ -1,0 +1,24 @@
+@use "../../sass/mixins.scss";
+
+#header {
+  @include mixins.infinite_scroll(-100svw);
+
+  section {
+    h3 {
+      text-align: center;
+    }
+  }
+  #breaking_news {
+    display: flex;
+    flex-direction: row;
+    animation: 3s slide infinite linear;
+
+    h2 {
+      min-width: 100svw;
+      color: #e97777;
+      line-height: normal;
+      font-weight: 900;
+      display: flex;
+    }
+  }
+}

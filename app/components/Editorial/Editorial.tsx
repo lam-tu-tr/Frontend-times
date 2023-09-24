@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 
-import styles from "./Works.module.scss";
+import styles from "./Editorial.module.scss";
 import Image from "next/image";
 import Link from "next/navigation";
-
-import { BsStar } from "react-icons/bs";
 
 import ItineraryPNG from "../../assets/Itinerary.png";
 import KimNailsPNG from "../../assets/NailSalon.png";
@@ -50,12 +48,10 @@ const projectsData = [
   },
 ];
 export default function Works() {
-  const [currentCard, setCurrentCard] = useState<Object>({});
-
   const projects = projectsData.map((project, index) => {
     return (
-      <li key={index} className={styles.card}>
-        <div id={styles.project_pic}>
+      <li key={index} id={styles.card}>
+        <div id={styles.project_pic} className="img_container">
           <Image
             src={project.src}
             alt={project.alt}
@@ -66,21 +62,14 @@ export default function Works() {
         </div>
         <div id={styles.project_description}>
           <h4>{project.title}</h4>
-          <aside>
-            <BsStar className="w-6 h-6" />
-            <BsStar className="w-6 h-6" />
-            <BsStar className="w-6 h-6" />
-            <BsStar className="w-6 h-6" />
-            <BsStar className="w-6 h-6" />
-          </aside>
           <p>{project.description}</p>
         </div>
       </li>
     );
   });
   return (
-    <section id={styles.works}>
-      <h3>Works</h3>
+    <section id={styles.works} className="top_border">
+      <h3>Editorial Top Project Picks </h3>
       <ul className={styles.scroll_container}>{projects}</ul>
     </section>
   );

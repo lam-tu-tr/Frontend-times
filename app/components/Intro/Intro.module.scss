@@ -1,32 +1,19 @@
 @use "../../sass/mixins.scss";
 
 #intro {
-  grid-area: intro;
-  background-color: var(--light-bg-color);
-  padding: 5rem;
-  font-size: xx-large;
+  padding: 1em;
 
-  clip-path: polygon(0 0, 100% 0%, 100% 85%, 85% 100%, 0 100%, 0 0);
   position: relative;
   display: flex;
-  flex-direction: row;
-  div {
-    flex: 0 0 40%;
+  flex-direction: column;
 
-    position: relative;
+  h2 {
+    padding: 0;
+    line-height: 2.2rem;
   }
-  //corner fold
-  &::after {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: block;
-    width: 15%;
-    height: 15%;
-    background-color: #9adcff;
-    border-left: 0.2rem solid var(--light-font-color);
-    border-top: 0.2rem solid var(--light-font-color);
-    z-index: 4;
-    content: "";
+  #profile_pic {
+    aspect-ratio: 3/2;
+    position: relative;
+    margin: 1rem 0;
   }
 }

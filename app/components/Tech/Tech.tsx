@@ -12,33 +12,37 @@ import node from "../../assets/icons/nodejs.svg";
 import prisma from "../../assets/icons/prisma.svg";
 import ts from "../../assets/icons/typescript.svg";
 import sass from "../../assets/icons/sass.svg";
+
 export default function Tech() {
-  const logos = [html, css, sass, js, ts, next, node, express, prisma];
+  const logos = [html, css, sass, js, ts, next, node, express, prisma, figma];
   return (
-    <div id={style.tech}>
-      <section>
-        {logos.map((tech, index) => {
-          return (
-            <span key={index}>
-              <Image src={tech} width={56} height={56} alt={"tech"} />
-            </span>
-          );
-        })}
-        {logos.map((tech, index) => {
-          return (
-            <span key={index}>
-              <Image src={tech} width={56} height={56} alt={"tech"} />
-            </span>
-          );
-        })}
-        {logos.map((tech, index) => {
-          return (
-            <span key={index}>
-              <Image src={tech} width={56} height={56} alt={"tech"} />
-            </span>
-          );
-        })}
-      </section>
+    <div id={style.tech_container} className="top_border">
+      <h3>Current Technologies</h3>
+      <div id={style.tech}>
+        <section>
+          {logos.map((tech, index) => {
+            return (
+              <span key={index}>
+                <Image src={tech} alt={"tech"} />
+              </span>
+            );
+          })}
+          {logos.map((tech, index) => {
+            return (
+              <span key={index}>
+                <Image src={tech} alt={"tech"} />
+              </span>
+            );
+          })}
+          {logos.map((tech, index) => {
+            return (
+              <span key={index}>
+                <Image src={tech} alt={"tech"} />
+              </span>
+            );
+          })}
+        </section>
+      </div>
     </div>
   );
 }

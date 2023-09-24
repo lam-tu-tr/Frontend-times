@@ -6,16 +6,18 @@ import Avatar from "../../assets/Avatar.jpeg";
 
 export default function Intro() {
   return (
-    <div id={styles.intro}>
-      <div>
+    <div id={styles.intro} className=" top_border">
+      <h2>New Bay Area player set to make waves in the tech industry.</h2>
+
+      <div id={styles.profile_pic} className="img_container">
         <Image
           src={Avatar}
           alt={"Avatar"}
           fill={true}
-          // sizes="60svw"
-          style={{ objectFit: "contain" }}
+          style={{ objectFit: "cover" }}
         ></Image>
       </div>
+
       <p>
         <b>Meet Lam</b>, the emerging electrical engineer turned front-end
         developer who thrives on the excitement of transforming digital UI/UX

@@ -1,0 +1,45 @@
+:root {
+  --font-size-xsmal: 10px;
+  --font-size-small: 12px;
+  --font-size-medium: 16px;
+  --font-size-large: 24px;
+  --font-size-xlarge: 44px;
+}
+
+:root {
+  --spacing-mobile: 16px;
+  --spacing-tablet: 32px;
+  --spacing-desktop: 64px;
+}
+
+:root {
+  --display-mobile: 480px;
+  --display-tablet: 720px;
+  --display-desktop: 1280;
+}
+
+:root {
+  --light-bg-color: hsl(53, 24%, 93%);
+  --light-font-color: hsl(228, 8%, 12%);
+  --dark-bg-color: ;
+  --dark-font-color: ;
+}
+
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */

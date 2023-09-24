@@ -8,6 +8,9 @@ export default function Nav() {
 
   const [navOffset, setNavOffset] = useState<number | null>(null);
 
+  const [navSticky, setNavSticky] = useState<Boolean>(false);
+
+  //* Recalculate Y of Nav to Top on screen resize
   useEffect(() => {
     function updateNavOffset() {
       setNavOffset(navRef.current?.offsetTop || null);
@@ -22,13 +25,15 @@ export default function Nav() {
     };
   }, []);
 
+  //* Auto sticky nav when screen scrolls past Nav
   useEffect(() => {
-    // const navOffset = navRef.current?.offsetTop;
     function navStickyScroll() {
       if (navOffset !== null && window.scrollY >= navOffset) {
+        setNavSticky(true);
         document.body.classList.add("sticky");
         document.body.style.paddingTop = navRef.current?.offsetHeight + "px";
       } else {
+        setNavSticky(false);
         document.body.classList.remove("sticky");
         document.body.style.paddingTop = "0px";
       }
@@ -43,19 +48,27 @@ export default function Nav() {
 
   return (
     <nav id={style.nav} ref={navRef}>
-      <ul>
+      {/* <ul>
         <li>-Home-</li>
         <li>-More About me-</li>
         <li>-Project Details-</li>
-      </ul>
+      </ul> */}
+      <h3>{navSticky && "FRONTEND TIMES"}</h3>
+
       <aside>
-        <span>Language</span>
-        <span>
-          <BsSunglasses className="w-10 h-10" />
-          ---
-          <BsEyeglasses className="w-10 h-10" />
-        </span>
+        {!navSticky && (
+          <>
+            <span>Language</span>
+            <span>
+              <BsSunglasses className="w-10 h-10" />
+              ---
+              <BsEyeglasses className="w-10 h-10" />
+            </span>
+          </>
+        )}
       </aside>
     </nav>
   );
 }
+
+//TODO Display Frontend Times when scrolled past a certain point

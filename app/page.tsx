@@ -1,21 +1,13 @@
 "use client";
 import { useRef } from "react";
 
-import About from "./components/About/About";
-import Works from "./components/Works/Works";
 import Intro from "./components/Intro/Intro";
+import Editorial from "./components/Editorial/Editorial";
 import Tech from "./components/Tech/Tech";
-import Connect from "./components/Connect/Connect";
-import Location from "./components/Location/Location";
 import Footer from "./components/Footer/Footer";
-import Nav from "./components/Nav/Nav";
 
-import { Passion_One } from "next/font/google";
-
-const passion_one = Passion_One({
-  weight: "400",
-  subsets: ["latin"],
-});
+import Advertisement from "./components/Advertisement/Advertisement";
+import Header from "./components/Header/Header";
 
 export default function Home() {
   //Create a ref so that the button in the connect Element
@@ -30,25 +22,17 @@ export default function Home() {
   }
 
   return (
-    <div>
-      <section id="title">
-        <h1 className={passion_one.className}>&#60;FRONTEND TIMES /&#62;</h1>
-        <aside id="breaking_news">
-          <h2>BREAKING NEWS</h2>
-          <h2>BREAKING NEWS</h2>
-        </aside>
-        <Nav></Nav>
-      </section>
+    <>
+      <Header />
 
       <main>
         <Intro />
-        <About />
-        <Works />
-        <Location />
+        <Editorial />
         <Tech />
-        <Connect scrollToFooter={scrollToFooter} />
+        <Advertisement />
       </main>
+
       <Footer ref={footerRef} />
-    </div>
+    </>
   );
 }
