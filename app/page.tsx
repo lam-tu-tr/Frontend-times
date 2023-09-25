@@ -26,7 +26,7 @@ export default function Home() {
       <Header />
 
       <main>
-        <Intro />
+        <Intro scrollToFooter={scrollToFooter} />
         <Editorial />
         <Tech />
         <Advertisement />

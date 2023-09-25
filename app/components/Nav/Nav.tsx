@@ -3,12 +3,23 @@ import style from "./Nav.module.scss";
 
 import { BsEyeglasses, BsSunglasses } from "react-icons/bs";
 
+import { Passion_One } from "next/font/google";
+
+const passion_one = Passion_One({
+  weight: "400",
+  subsets: ["latin"],
+});
+
 export default function Nav() {
   const navRef = useRef<HTMLElement | null>(null);
 
   const [navOffset, setNavOffset] = useState<number | null>(null);
 
   const [navSticky, setNavSticky] = useState<Boolean>(false);
+
+  const [lightMode, setLightMode] = useState<Boolean>(true);
+
+  const [english, setEnglish] = useState<Boolean>(true);
 
   //* Recalculate Y of Nav to Top on screen resize
   useEffect(() => {
@@ -53,16 +64,23 @@ export default function Nav() {
         <li>-More About me-</li>
         <li>-Project Details-</li>
       </ul> */}
-      <h3>{navSticky && "FRONTEND TIMES"}</h3>
+      <h3 className={passion_one.className}>
+        {navSticky && "<FRONTEND TIMES/>"}
+      </h3>
 
       <aside>
         {!navSticky && (
           <>
-            <span>Language</span>
-            <span>
-              <BsSunglasses className="icon" />
-              ---
-              <BsEyeglasses className="icon" />
+            <span onClick={() => setEnglish(!english)}>
+              {english ? "English" : "Vietnamese"}
+            </span>
+
+            <span onClick={() => setLightMode(!lightMode)}>
+              {lightMode ? (
+                <BsSunglasses className="icon" />
+              ) : (
+                <BsEyeglasses className="icon" />
+              )}
             </span>
           </>
         )}
@@ -70,5 +88,3 @@ export default function Nav() {
     </nav>
   );
 }
-
-//TODO Display Frontend Times when scrolled past a certain point
