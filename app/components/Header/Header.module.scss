@@ -4,7 +4,7 @@
   @include mixins.infinite_scroll(-100svw);
 
   section {
-    h3 {
+    > h3 {
       text-align: center;
       margin-bottom: 4px;
     }

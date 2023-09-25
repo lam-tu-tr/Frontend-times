@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { Lexend_Deca, Inconsolata } from "next/font/google";
 
 const inconsolata = Inconsolata({
-  weight: ["300", "400", "900"],
+  weight: ["300", "400", "600", "900"],
   subsets: ["latin"],
 });
 
