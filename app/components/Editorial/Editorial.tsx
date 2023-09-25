@@ -8,6 +8,8 @@ import KimNailsPNG from "../../assets/NailSalon.png";
 import PokedexPNG from "../../assets/Pokedex.png";
 import LamTypesPNG from "../../assets/LamTypes.png";
 
+import { BsArrowUpRight } from "react-icons/bs";
+
 const projectsData = [
   {
     title: "Ai Itinery Planner",
@@ -51,12 +53,7 @@ export default function Works() {
   const projects = projectsData.map((project, index) => {
     return (
       <li key={index} id={styles.card}>
-        <a
-          id={styles.project_pic}
-          className="img_container"
-          aria-label={`${project.title} Project Picture`}
-          href={project.link}
-        >
+        <div id={styles.project_pic} className="img_container">
           <Image
             src={project.src}
             alt={project.alt}
@@ -64,11 +61,19 @@ export default function Works() {
             // sizes="60svw"
             style={{ objectFit: "contain" }}
           ></Image>
-        </a>
-        <div id={styles.project_description}>
-          <h4>{project.title}</h4>
-          <p>{project.description}</p>
         </div>
+
+        <a
+          aria-label={`${project.title} Project Picture`}
+          href={project.link}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <h4>{project.title}</h4>
+          <BsArrowUpRight />
+        </a>
+
+        <p>{project.description}</p>
       </li>
     );
   });
