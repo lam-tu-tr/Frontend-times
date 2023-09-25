@@ -10,6 +10,8 @@ const passion_one = Passion_One({
   subsets: ["latin"],
 });
 
+import { BiMenu } from "react-icons/bi";
+
 export default function Nav() {
   const navRef = useRef<HTMLElement | null>(null);
 
@@ -64,17 +66,15 @@ export default function Nav() {
         <li>-More About me-</li>
         <li>-Project Details-</li>
       </ul> */}
-      <h3 className={passion_one.className}>
-        {navSticky && "<FRONTEND TIMES/>"}
-      </h3>
 
       <aside>
+        {navSticky && (
+          <h3 className={passion_one.className}>
+            {navSticky && "<FRONTEND TIMES/>"}
+          </h3>
+        )}
         {!navSticky && (
           <>
-            <span onClick={() => setEnglish(!english)}>
-              {english ? "English" : "Vietnamese"}
-            </span>
-
             <span onClick={() => setLightMode(!lightMode)}>
               {lightMode ? (
                 <BsSunglasses className="icon" />
@@ -82,9 +82,16 @@ export default function Nav() {
                 <BsEyeglasses className="icon" />
               )}
             </span>
+
+            {/* <span onClick={() => setEnglish(!english)}>
+              {english ? "English" : "Vietnamese"}
+            </span> */}
           </>
         )}
       </aside>
+      <div>
+        <BiMenu className="icon" />
+      </div>
     </nav>
   );
 }

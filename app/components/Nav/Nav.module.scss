@@ -7,36 +7,32 @@
 
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   border-top: 2px solid var(--light-font-color);
   border-bottom: 2px solid var(--light-font-color);
 
+  padding: 0 var(--spacing-mobile);
   z-index: 100;
-  ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+  // ul {
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: flex-start;
 
-    li {
-      @include mixins.flexCenter();
-      margin-left: 2rem;
-    }
-  }
+  //   li {
+  //     @include mixins.flexCenter();
+  //     margin-left: 2rem;
+  //   }
+  // }
 
   h3 {
   }
 
   aside {
     display: flex;
-    justify-content: center;
     align-items: center;
     span {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      padding: 0 1rem;
+      margin-right: var(--spacing-mobile);
     }
   }
 }
