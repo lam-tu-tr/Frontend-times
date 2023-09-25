@@ -4,7 +4,11 @@ import styles from "./Intro.module.scss";
 
 import Avatar from "../../assets/Avatar.jpeg";
 
-export default function Intro() {
+export default function Intro({
+  scrollToFooter,
+}: {
+  scrollToFooter: () => void;
+}) {
   return (
     <div id={styles.intro} className=" top_border">
       <h2>New Bay Area developer set to make waves in the tech industry.</h2>
@@ -23,6 +27,16 @@ export default function Intro() {
         developer who thrives on the excitement of transforming digital UI/UX
         designs into tangible and seamless digital experience.
       </p>
+
+      <aside>
+        <button
+          type="button"
+          onClick={scrollToFooter}
+          className={styles.button_54}
+        >
+          Connect
+        </button>
+      </aside>
     </div>
   );
 }
