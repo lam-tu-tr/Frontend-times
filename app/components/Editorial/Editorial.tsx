@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 import styles from "./Editorial.module.scss";
 import Image from "next/image";
-import Link from "next/navigation";
 
 import ItineraryPNG from "../../assets/Itinerary.png";
 import KimNailsPNG from "../../assets/NailSalon.png";
@@ -17,16 +16,16 @@ const projectsData = [
     rating: 3,
     description:
       "Empower your journey with the magic of Artificial Intelligence, crafting seamless and unforgettable travel itineraries just for you.",
-    link: "Project 1",
+    link: "https://ai-itinerary-planner.vercel.app/",
   },
   {
-    title: "Kim Nails and Beauty Lounge",
+    title: "Kim Nails ",
     src: KimNailsPNG,
     alt: "Project 2 Pic",
     rating: 3,
     description:
       "Elevate your style with stunning nail artistry at our salon – book your appointment for pampering perfection.",
-    link: "Project 2",
+    link: "https://www.kimnailsandbeautylounge.com/",
   },
   {
     title: "Sinnoh Pokedex",
@@ -35,7 +34,7 @@ const projectsData = [
     rating: 3,
     description:
       "Discover and learn about Pokémon like never before with our Pokedex web app - your portal to the Pokemon world",
-    link: "Project 3",
+    link: "https://sinnoh-pokedex.vercel.app/",
   },
   {
     title: "Lam Types",
@@ -44,14 +43,20 @@ const projectsData = [
     rating: 3,
     description:
       "Boost your touch typing skills with this speed test web app - assess your typing speed and accuracy",
-    link: "Project 4",
+    link: "https://lam-tu-tr.github.io/LamTypes.github.io/",
   },
 ];
+
 export default function Works() {
   const projects = projectsData.map((project, index) => {
     return (
       <li key={index} id={styles.card}>
-        <div id={styles.project_pic} className="img_container">
+        <a
+          id={styles.project_pic}
+          className="img_container"
+          aria-label={`${project.title} Project Picture`}
+          href={project.link}
+        >
           <Image
             src={project.src}
             alt={project.alt}
@@ -59,7 +64,7 @@ export default function Works() {
             // sizes="60svw"
             style={{ objectFit: "contain" }}
           ></Image>
-        </div>
+        </a>
         <div id={styles.project_description}>
           <h4>{project.title}</h4>
           <p>{project.description}</p>
@@ -67,6 +72,7 @@ export default function Works() {
       </li>
     );
   });
+
   return (
     <section id={styles.works} className="top_border">
       <h3>Editorial Top Project Picks </h3>

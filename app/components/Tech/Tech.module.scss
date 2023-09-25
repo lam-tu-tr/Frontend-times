@@ -38,12 +38,12 @@
       background: linear-gradient(to right, #ffffff00, white);
     }
 
-    section {
+    ul {
       display: flex;
       flex-direction: row;
       animation: 10s slide infinite linear;
 
-      span {
+      li {
         min-width: 40px;
         min-height: 40px;
         margin: 0 10px;

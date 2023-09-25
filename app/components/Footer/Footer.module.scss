@@ -13,12 +13,12 @@
   h3 {
     margin: var(--spacing-mobile) 0;
   }
+
   section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: var(--spacing-mobile) 0;
   }
   // #form {
   //   flex-grow: 4;
@@ -49,11 +49,17 @@
       }
     }
   }
+
   #social {
     display: flex;
     flex-direction: row;
-    span:first-child {
-      margin-right: var(--spacing-mobile);
+    justify-content: center;
+    align-items: center;
+    margin: var(--spacing-mobile) 0;
+    li {
+      &:first-child {
+        margin-right: var(--spacing-mobile);
+      }
     }
   }
 }

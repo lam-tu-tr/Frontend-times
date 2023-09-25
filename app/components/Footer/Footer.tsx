@@ -1,7 +1,7 @@
 "use client";
 
 import { forwardRef } from "react";
-import styles from "./Footer.module.scss";
+import style from "./Footer.module.scss";
 
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -12,9 +12,9 @@ interface ChildProps {}
 
 const Footer = forwardRef<HTMLElement, ChildProps>(({}, footerRef) => {
   return (
-    <footer id={styles.footer} ref={footerRef}>
+    <footer id={style.footer} ref={footerRef}>
       <h3>&#60;FRONTEND TIMES /&#62;</h3>
-      {/* <form action="submit" id={styles.form}>
+      {/* <form action="submit" id={style.form}>
         <aside>
           <input placeholder="@gmail.com" type="text" />
           <input placeholder="Subject2" type="text" />
@@ -28,23 +28,27 @@ const Footer = forwardRef<HTMLElement, ChildProps>(({}, footerRef) => {
         ></textarea>
       </form> */}
 
-      <section id={styles.contact}>
-        <aside id={styles.info}>
+      <section id={style.contact}>
+        <a id={style.info} aria-label="Email">
           <span>
-            <BsMailbox2 className="w-10 h-10" />
+            <BsMailbox2 className="icon" />
           </span>
           <span>Lam.tu.tr@gmail.com</span>
-        </aside>
+        </a>
       </section>
 
-      <section id={styles.social}>
-        <span>
-          <FaGithub className="w-8 h-8" />
-        </span>
-        <span>
-          <FaLinkedin className="w-8 h-8" />
-        </span>
-      </section>
+      <ul id={style.social} aria-label="Social Links" role="list">
+        <li>
+          <a aria-label="Github" href="https://github.com/lam-tu-tr">
+            <FaGithub className="icon" />
+          </a>
+        </li>
+        <li>
+          <a aria-label="Linkedin" href="#">
+            <FaLinkedin className="icon" />
+          </a>
+        </li>
+      </ul>
     </footer>
   );
 });
