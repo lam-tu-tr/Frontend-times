@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import style from "./Nav.module.scss";
 
-import { header } from "../Header/Header.module.scss";
-import { editorial } from "../Editorial/Editorial.module.scss";
-import { tech_container } from "../Tech/Tech.module.scss";
-import { footer } from "../Footer/Footer.module.scss";
+import header from "../Header/Header.module.scss";
+import editorial from "../Editorial/Editorial.module.scss";
+import tech_container from "../Tech/Tech.module.scss";
+import footer from "../Footer/Footer.module.scss";
 
 import { BsEyeglasses, BsSunglasses } from "react-icons/bs";
 
@@ -73,19 +73,28 @@ export default function Nav() {
       </ul> */}
 
       <nav className={`${style.mobile_nav} ${menuOpened && style.menuOpened}`}>
-        <a href={`#${header}`} onClick={() => setMenuOpened(!menuOpened)}>
+        <a
+          href={`#${header.header}`}
+          onClick={() => setMenuOpened(!menuOpened)}
+        >
           Home
         </a>
-        <a href={`#${editorial}`} onClick={() => setMenuOpened(!menuOpened)}>
+        <a
+          href={`#${editorial.editorial}`}
+          onClick={() => setMenuOpened(!menuOpened)}
+        >
           Editorial
         </a>
         <a
-          href={`#${tech_container}`}
+          href={`#${tech_container.tech_container}`}
           onClick={() => setMenuOpened(!menuOpened)}
         >
           Skills
         </a>
-        <a href={`#${footer}`} onClick={() => setMenuOpened(!menuOpened)}>
+        <a
+          href={`#${footer.footer}`}
+          onClick={() => setMenuOpened(!menuOpened)}
+        >
           Contact
         </a>
       </nav>
