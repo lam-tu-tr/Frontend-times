@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./Editorial.module.scss";
+import style from "./Editorial.module.scss";
 import Image from "next/image";
 
 import ItineraryPNG from "../../assets/Itinerary.png";
@@ -52,8 +52,8 @@ const projectsData = [
 export default function Works() {
   const projects = projectsData.map((project, index) => {
     return (
-      <li key={index} id={styles.card}>
-        <div id={styles.project_pic} className="img_container">
+      <li key={index} id={style.card}>
+        <div id={style.project_pic} className="img_container">
           <Image
             src={project.src}
             alt={project.alt}
@@ -79,9 +79,9 @@ export default function Works() {
   });
 
   return (
-    <section id={styles.works} className="top_border">
+    <section id={style.editorial} className="top_border">
       <h3>Editorial Top Project Picks </h3>
-      <ul className={styles.scroll_container}>{projects}</ul>
+      <ul className={style.scroll_container}>{projects}</ul>
     </section>
   );
 }

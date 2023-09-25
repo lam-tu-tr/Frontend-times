@@ -1,6 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import style from "./Nav.module.scss";
 
+import { header } from "../Header/Header.module.scss";
+import { editorial } from "../Editorial/Editorial.module.scss";
+import { tech_container } from "../Tech/Tech.module.scss";
+import { footer } from "../Footer/Footer.module.scss";
+
 import { BsEyeglasses, BsSunglasses } from "react-icons/bs";
 
 import { Passion_One } from "next/font/google";
@@ -9,8 +14,6 @@ const passion_one = Passion_One({
   weight: "400",
   subsets: ["latin"],
 });
-
-import { BiMenu } from "react-icons/bi";
 
 export default function Nav() {
   const navRef = useRef<HTMLElement | null>(null);
@@ -21,7 +24,9 @@ export default function Nav() {
 
   const [lightMode, setLightMode] = useState<Boolean>(true);
 
-  const [english, setEnglish] = useState<Boolean>(true);
+  // const [english, setEnglish] = useState<Boolean>(true);
+
+  const [menuOpened, setMenuOpened] = useState<Boolean>(false);
 
   //* Recalculate Y of Nav to Top on screen resize
   useEffect(() => {
@@ -60,12 +65,30 @@ export default function Nav() {
   }, [navOffset]);
 
   return (
-    <nav id={style.nav} ref={navRef}>
+    <section id={style.nav} ref={navRef} className="nav_bar">
       {/* <ul>
         <li>-Home-</li>
         <li>-More About me-</li>
         <li>-Project Details-</li>
       </ul> */}
+
+      <nav className={`${style.mobile_nav} ${menuOpened && style.menuOpened}`}>
+        <a href={`#${header}`} onClick={() => setMenuOpened(!menuOpened)}>
+          Home
+        </a>
+        <a href={`#${editorial}`} onClick={() => setMenuOpened(!menuOpened)}>
+          Editorial
+        </a>
+        <a
+          href={`#${tech_container}`}
+          onClick={() => setMenuOpened(!menuOpened)}
+        >
+          Skills
+        </a>
+        <a href={`#${footer}`} onClick={() => setMenuOpened(!menuOpened)}>
+          Contact
+        </a>
+      </nav>
 
       <aside>
         {navSticky && (
@@ -89,9 +112,16 @@ export default function Nav() {
           </>
         )}
       </aside>
-      <div>
-        <BiMenu className="icon" />
-      </div>
-    </nav>
+      <button
+        className={`hamburger hamburger--spin ${menuOpened && "is-active"}`}
+        type="button"
+        aria-label="Navigation Menu"
+        onClick={() => setMenuOpened(!menuOpened)}
+      >
+        <span className="hamburger-box">
+          <span className="hamburger-inner"></span>
+        </span>
+      </button>
+    </section>
   );
 }

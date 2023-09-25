@@ -35,4 +35,30 @@
       margin-right: var(--spacing-mobile);
     }
   }
+  button {
+    z-index: 101;
+  }
+}
+
+.mobile_nav {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  z-index: 99;
+  width: 100%;
+  min-height: 100svh;
+  padding: 10rem 2rem;
+  background-color: white;
+
+  transition: 0.5s;
+
+  a {
+    display: block;
+    font-size: var(--font-size-xlarge);
+    padding: 2rem 0;
+    font-weight: 600;
+  }
+}
+.menuOpened {
+  left: 0;
 }
