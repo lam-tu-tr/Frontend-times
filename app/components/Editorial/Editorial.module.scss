@@ -12,6 +12,7 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 80%;
+    // grid-row: auto;
     overflow-x: auto;
     gap: 2em;
 
@@ -37,20 +38,21 @@
       flex-direction: column;
 
       #project_pic {
-        flex: 0 0 70%;
+        // flex: 0 0 70%;
         position: relative;
         min-width: 100%;
         aspect-ratio: 1/1;
       }
       #project_description {
-        flex-basis: 30%;
+        // flex-basis: 30%;
         display: flex;
         flex-direction: column;
-        h4 {
-          flex: 0 0 20%;
-        }
+        // h4 {
+        //   // flex: 0 0 20%;
+        //   font-size:
+        // }
         p {
-          flex: 0 0 70%;
+          // flex: 0 0 70%;
         }
       }
     }

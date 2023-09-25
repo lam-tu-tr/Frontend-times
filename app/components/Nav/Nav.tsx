@@ -60,9 +60,9 @@ export default function Nav() {
           <>
             <span>Language</span>
             <span>
-              <BsSunglasses className="w-10 h-10" />
+              <BsSunglasses className="icon" />
               ---
-              <BsEyeglasses className="w-10 h-10" />
+              <BsEyeglasses className="icon" />
             </span>
           </>
         )}

@@ -22,6 +22,7 @@ export default function Header() {
       <aside id={style.breaking_news}>
         <h2>BREAKING NEWS</h2>
         <h2>BREAKING NEWS</h2>
+        <h2>BREAKING NEWS</h2>
       </aside>
     </header>
   );

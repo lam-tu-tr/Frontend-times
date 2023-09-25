@@ -19,29 +19,29 @@ export default function Tech() {
     <div id={style.tech_container} className="top_border">
       <h3>Current Technologies</h3>
       <div id={style.tech}>
-        <section>
+        <ul aria-label="List of Current Technologies">
           {logos.map((tech, index) => {
             return (
-              <span key={index}>
+              <li key={index}>
                 <Image src={tech} alt={"tech"} />
-              </span>
+              </li>
             );
           })}
           {logos.map((tech, index) => {
             return (
-              <span key={index}>
+              <li key={index}>
                 <Image src={tech} alt={"tech"} />
-              </span>
+              </li>
             );
           })}
           {logos.map((tech, index) => {
             return (
-              <span key={index}>
+              <li key={index}>
                 <Image src={tech} alt={"tech"} />
-              </span>
+              </li>
             );
           })}
-        </section>
+        </ul>
       </div>
     </div>
   );
