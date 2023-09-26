@@ -1,15 +1,15 @@
 :root {
-  --font-size-xsmal: 10px;
-  --font-size-small: 12px;
-  --font-size-medium: 16px;
-  --font-size-large: 24px;
-  --font-size-xlarge: 36px;
+  --font-size-xsmal: 0.6rem;
+  --font-size-small: 0.8rem;
+  --font-size-medium: 1rem;
+  --font-size-large: 1.5rem;
+  --font-size-xlarge: 2.5rem;
 }
 
 :root {
-  --spacing-mobile: 16px;
-  --spacing-tablet: 32px;
-  --spacing-desktop: 64px;
+  --spacing-mobile: 1rem;
+  --spacing-tablet: 2rem;
+  --spacing-desktop: 4rem;
 }
 
 :root {
@@ -19,21 +19,19 @@
 }
 
 :root {
-  --light-bg-color: hsl(53, 24%, 93%);
-  --light-font-color: hsl(228, 8%, 12%);
-  --dark-bg-color: ;
-  --dark-font-color: ;
+  --body-bg-color: hsl(0, 0%, 100%);
+  --body-font-color: hsl(231, 8%, 17%);
+  --footer-bg-color: hsl(228, 8%, 12%);
+  --footer-font-color: hsl(0, 0%, 100%);
+}
+
+[data-theme="dark"] {
+  --body-bg-color: hsl(240, 6%, 10%);
+  --body-font-color: hsl(54, 100%, 98%);
+  --footer-bg-color: hsl(240, 5%, 4%);
 }
 
 /*
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

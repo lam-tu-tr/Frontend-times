@@ -22,21 +22,21 @@ export default function Tech() {
         <ul aria-label="List of Current Technologies">
           {logos.map((tech, index) => {
             return (
-              <li key={index}>
+              <li key={index} className="icon">
                 <Image src={tech} alt={"tech"} />
               </li>
             );
           })}
           {logos.map((tech, index) => {
             return (
-              <li key={index}>
+              <li key={index} className="icon">
                 <Image src={tech} alt={"tech"} />
               </li>
             );
           })}
           {logos.map((tech, index) => {
             return (
-              <li key={index}>
+              <li key={index} className="icon">
                 <Image src={tech} alt={"tech"} />
               </li>
             );

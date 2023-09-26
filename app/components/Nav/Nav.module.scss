@@ -1,16 +1,16 @@
 @use "../../sass/mixins.scss";
 
 #nav {
-  height: 6svh;
+  height: 8svh;
 
-  background-color: white;
+  background-color: var(--body-bg-color);
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-top: 2px solid var(--light-font-color);
-  border-bottom: 2px solid var(--light-font-color);
+  border-top: 2px solid var(--body-font-color);
+  border-bottom: 2px solid var(--body-font-color);
 
   padding: 0 var(--spacing-mobile);
   z-index: 100;
@@ -46,9 +46,9 @@
   left: 100%;
   z-index: 99;
   width: 100%;
-  min-height: 100svh;
+  min-height: 100vh;
   padding: 10rem 2rem;
-  background-color: white;
+  background-color: var(--body-bg-color);
 
   transition: 0.5s;
 
@@ -61,4 +61,10 @@
 }
 .menuOpened {
   left: 0;
+}
+
+#hamburger_symbol,
+#hamburger_symbol::before,
+#hamburger_symbol::after {
+  background-color: var(--body-font-color);
 }

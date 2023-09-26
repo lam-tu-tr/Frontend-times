@@ -9,7 +9,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid gray;
+    border: 1px solid var(--body-font-color);
 
     span {
       font-size: var(--font-size-large);
