@@ -76,7 +76,7 @@ export default function Nav() {
   }, [navOffset]);
 
   return (
-    <section id={style.nav} ref={navRef} className="nav_bar">
+    <section id={style.nav_section} ref={navRef} className="nav_bar">
       {/* <ul>
         <li>-Home-</li>
         <li>-More About me-</li>

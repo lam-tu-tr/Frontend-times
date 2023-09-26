@@ -19,6 +19,7 @@ const projectsData = [
     description:
       "Empower your journey with the magic of Artificial Intelligence, crafting seamless and unforgettable travel itineraries just for you.",
     link: "https://ai-itinerary-planner.vercel.app/",
+    tech: ["Prisma", "OpenAI", "Typescript", "NextJS"],
   },
   {
     title: "Kim Nails ",
@@ -28,6 +29,7 @@ const projectsData = [
     description:
       "Elevate your style with stunning nail artistry at our salon – book your appointment for pampering perfection.",
     link: "https://www.kimnailsandbeautylounge.com/",
+    tech: ["NextJS", "Sass/Scss", "React", "Typescript"],
   },
   {
     title: "Sinnoh Pokedex",
@@ -37,6 +39,7 @@ const projectsData = [
     description:
       "Discover and learn about Pokémon like never before with our Pokedex web app - your portal to the Pokemon world",
     link: "https://sinnoh-pokedex.vercel.app/",
+    tech: ["NodeJS", "Express", "React", "Javascript ES6+"],
   },
   {
     title: "Lam Types",
@@ -46,6 +49,7 @@ const projectsData = [
     description:
       "Boost your touch typing skills with this speed test web app - assess your typing speed and accuracy",
     link: "https://lam-tu-tr.github.io/LamTypes.github.io/",
+    tech: ["Javascript ES6+", "HTML5", "CSS3"],
   },
 ];
 
@@ -74,6 +78,12 @@ export default function Works() {
         </a>
 
         <p>{project.description}</p>
+
+        <p>
+          {project.tech.map((tech, index) => {
+            return <span key={index}>{tech},</span>;
+          })}
+        </p>
       </li>
     );
   });

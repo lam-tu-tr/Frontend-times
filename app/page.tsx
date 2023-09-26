@@ -24,15 +24,16 @@ export default function Home() {
   return (
     <>
       <Header />
+      <div id="main-column">
+        <main>
+          <Intro scrollToFooter={scrollToFooter} />
+          <Editorial />
+          <Tech />
+          <Advertisement />
+        </main>
 
-      <main>
-        <Intro scrollToFooter={scrollToFooter} />
-        <Editorial />
-        <Tech />
-        <Advertisement />
-      </main>
-
-      <Footer ref={footerRef} />
+        <Footer ref={footerRef} />
+      </div>
     </>
   );
 }
