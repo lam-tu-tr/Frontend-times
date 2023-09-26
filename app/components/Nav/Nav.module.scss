@@ -1,8 +1,7 @@
-@use "../../sass/mixins.scss";
-
-#nav {
+#nav_section {
   height: 8svh;
-
+  top: 0;
+  left: 0;
   background-color: var(--body-bg-color);
 
   display: flex;
@@ -61,10 +60,4 @@
 }
 .menuOpened {
   left: 0;
-}
-
-#hamburger_symbol,
-#hamburger_symbol::before,
-#hamburger_symbol::after {
-  background-color: var(--body-font-color);
 }

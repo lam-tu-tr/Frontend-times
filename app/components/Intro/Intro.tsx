@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "./Intro.module.scss";
+import style from "./Intro.module.scss";
 
 import Avatar from "../../assets/Avatar.jpeg";
 
@@ -10,10 +10,10 @@ export default function Intro({
   scrollToFooter: () => void;
 }) {
   return (
-    <div id={styles.intro} className=" top_border">
+    <div id={style.intro} className=" top_border">
       <h2>New Bay Area developer set to make waves in the tech industry.</h2>
 
-      <div id={styles.profile_pic} className="img_container">
+      <div id={style.profile_pic} className="img_container">
         <Image
           src={Avatar}
           alt={"Avatar"}
@@ -32,7 +32,7 @@ export default function Intro({
         <button
           type="button"
           onClick={scrollToFooter}
-          className={styles.button_54}
+          className={style.button_54}
         >
           Connect
         </button>

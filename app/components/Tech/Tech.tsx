@@ -34,13 +34,13 @@ export default function Tech() {
               </li>
             );
           })}
-          {logos.map((tech, index) => {
+          {/* {logos.map((tech, index) => {
             return (
               <li key={index} className="icon">
                 <Image src={tech} alt={"tech"} />
               </li>
             );
-          })}
+          })} */}
         </ul>
       </div>
     </div>
