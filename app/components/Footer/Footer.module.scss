@@ -6,12 +6,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--light-font-color);
-
-  * {
-    color: white;
-  }
-
+  background-color: var(--footer-bg-color);
+  color: var(--footer-font-color);
   h3 {
     margin: var(--spacing-mobile) 0;
   }
@@ -47,7 +43,7 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-
+      font-size: var(--font-size-large);
       &:first-child {
         margin-right: var(--spacing-mobile);
       }

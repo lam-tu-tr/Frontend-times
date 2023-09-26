@@ -31,11 +31,11 @@
     //*Fade object blend mode
     &::before {
       left: 0;
-      background: linear-gradient(to left, #ffffff00, white);
+      background: linear-gradient(to left, #ffffff00, var(--body-bg-color));
     }
     &::after {
       right: 0;
-      background: linear-gradient(to right, #ffffff00, white);
+      background: linear-gradient(to right, #ffffff00, var(--body-bg-color));
     }
 
     ul {
@@ -44,8 +44,6 @@
       animation: 10s slide infinite linear;
 
       li {
-        min-width: 40px;
-        min-height: 40px;
         margin: 0 10px;
       }
     }

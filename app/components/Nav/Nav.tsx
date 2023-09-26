@@ -24,9 +24,20 @@ export default function Nav() {
 
   const [lightMode, setLightMode] = useState<Boolean>(true);
 
-  // const [english, setEnglish] = useState<Boolean>(true);
-
   const [menuOpened, setMenuOpened] = useState<Boolean>(false);
+
+  const setMode = () => {
+    if (lightMode == true) {
+      document.querySelector("body")?.setAttribute("data-theme", "dark");
+      setLightMode(false);
+    } else {
+      document.querySelector("body")?.setAttribute("data-theme", "light");
+      setLightMode(true);
+    }
+  };
+  // const setDarkMode = () => {
+  //   document.querySelector("body")?.setAttribute("data-theme", "dark");
+  // };
 
   //* Recalculate Y of Nav to Top on screen resize
   useEffect(() => {
@@ -107,7 +118,7 @@ export default function Nav() {
         )}
         {!navSticky && (
           <>
-            <span onClick={() => setLightMode(!lightMode)}>
+            <span onClick={() => setMode()}>
               {lightMode ? (
                 <BsSunglasses className="icon" />
               ) : (
@@ -128,7 +139,7 @@ export default function Nav() {
         onClick={() => setMenuOpened(!menuOpened)}
       >
         <span className="hamburger-box">
-          <span className="hamburger-inner"></span>
+          <span id={style.hamburger_symbol} className="hamburger-inner"></span>
         </span>
       </button>
     </section>
