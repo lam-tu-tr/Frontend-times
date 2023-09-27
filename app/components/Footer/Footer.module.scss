@@ -35,6 +35,7 @@
 
   #contact {
     padding: 0 3rem;
+    font-size: clamp(1.5rem, 1.2059rem + 1.1765vw, 2rem);
     #info {
       display: flex;
       flex-direction: row;
@@ -43,7 +44,6 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      font-size: var(--font-size-large);
       &:first-child {
         margin-right: var(--spacing-mobile);
       }

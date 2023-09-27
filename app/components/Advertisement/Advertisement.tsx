@@ -8,15 +8,14 @@ export default function Advertisement() {
     <div id={style.ad}>
       Advertisement
       <aside className="padded_container">
-        <Image
-          src={pointer}
-          alt="pointer"
-          className="w-12 scale-x-[-100%] fill-blue-500"
-        />
         <span>
-          <b>Your Website Here</b>
+          {/* inverted using tailwind */}
+          <Image src={pointer} alt="pointer" className="scale-x-[-100%] " />
         </span>
-        <Image src={pointer} alt="pointer" className="w-12" />
+        <h3>Your Website Here</h3>
+        <span>
+          <Image src={pointer} alt="pointer" />
+        </span>
       </aside>
     </div>
   );

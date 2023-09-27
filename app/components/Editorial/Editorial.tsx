@@ -89,7 +89,7 @@ export default function Works() {
   });
 
   return (
-    <section id={style.editorial} className="top_border padded_container">
+    <section id={style.editorial} className="top_border ">
       <h3>Editorial Top Project Picks </h3>
       <ul className={style.scroll_container}>{projects}</ul>
     </section>
