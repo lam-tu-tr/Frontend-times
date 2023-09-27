@@ -12,12 +12,12 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 80%;
-    // grid-row: auto;
+
     overflow-x: auto;
     overflow-y: hidden;
     gap: 2em;
 
-    //* Scroll snap
+    // //* Scroll snap
     scroll-snap-type: x mandatory;
     justify-content: start;
 
@@ -41,30 +41,42 @@
     #card {
       display: flex;
       flex-direction: column;
-
       #project_pic {
         position: relative;
-        aspect-ratio: 1/1;
+        aspect-ratio: 8/5;
       }
-      a {
+
+      #project_description {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        h4 {
-          margin-right: 4px;
-        }
-      }
-      p {
+        flex-direction: column;
         flex-grow: 1;
-      }
-      #tech_used {
-        align-items: flex-start;
-        margin-top: var(--spacing-mobile);
-        display: flex;
-        flex-wrap: wrap;
-        font-size: var(--font-size-small);
-        span {
-          margin-right: var(--spacing-mobile);
+        a {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          h4 {
+            margin-right: 4px;
+          }
+        }
+        p {
+          flex-grow: 1;
+          font-size: clamp(1.125rem, 0.9044rem + 0.8824vw, 1.5rem);
+        }
+        #tech_used {
+          align-items: flex-start;
+          margin-top: var(--spacing-mobile);
+          display: flex;
+          flex-wrap: wrap;
+          font-size: var(--font-size-small);
+          span {
+            font-size: clamp(0.8rem, 0.7rem + 0.4vw, 1rem);
+            margin-right: var(--spacing-mobile);
+            margin-bottom: 6px;
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            padding-top: 6px;
+            padding-right: 6px;
+          }
         }
       }
     }
@@ -72,16 +84,28 @@
 }
 @media (min-width: 700px) {
   #editorial {
-    max-width: 1080px;
+    max-width: 1200px;
     margin: 0 auto;
     ul {
-      grid-auto-columns: 1fr 1fr 1fr;
-      // gap: 2rem;
+      display: grid;
+      gap: 4rem;
+      grid-auto-flow: row;
+      grid-template-columns: 1fr 1fr;
+
       &::before {
         content: none;
       }
       &::after {
         content: none;
+      }
+      #card {
+        #project_pic {
+          aspect-ratio: 8/5;
+        }
+
+        #project_description {
+          // flex-basis: 50%;
+        }
       }
     }
   }

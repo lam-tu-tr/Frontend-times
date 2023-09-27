@@ -3,10 +3,10 @@ import React from "react";
 import style from "./Editorial.module.scss";
 import Image from "next/image";
 
-import ItineraryPNG from "../../assets/Itinerary.png";
-import KimNailsPNG from "../../assets/NailSalon.png";
-import PokedexPNG from "../../assets/Pokedex.png";
-import LamTypesPNG from "../../assets/LamTypes.png";
+import ItineraryPNG from "../../assets/Itinerary-desktop.png";
+import KimNailsPNG from "../../assets/NailSalon-desktop.png";
+import PokedexPNG from "../../assets/Pokedex-desktop.png";
+import LamTypesPNG from "../../assets/LamTypes-desktop.png";
 
 import { BsArrowUpRight } from "react-icons/bs";
 
@@ -66,23 +66,24 @@ export default function Works() {
             style={{ objectFit: "contain" }}
           ></Image>
         </div>
+        <div id={style.project_description}>
+          <a
+            aria-label={`${project.title} Project Picture`}
+            href={project.link}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <h4>{project.title}</h4>
+            <BsArrowUpRight />
+          </a>
 
-        <a
-          aria-label={`${project.title} Project Picture`}
-          href={project.link}
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <h4>{project.title}</h4>
-          <BsArrowUpRight />
-        </a>
+          <p>{project.description}</p>
 
-        <p>{project.description}</p>
-
-        <div id={style.tech_used}>
-          {project.tech.map((tech, index) => {
-            return <span key={index}>{tech}</span>;
-          })}
+          <div id={style.tech_used}>
+            {project.tech.map((tech, index) => {
+              return <span key={index}>{tech}</span>;
+            })}
+          </div>
         </div>
       </li>
     );
