@@ -16,8 +16,10 @@ import sass from "../../assets/icons/sass.svg";
 export default function Tech() {
   const logos = [html, css, sass, js, ts, next, node, express, prisma, figma];
   return (
-    <div id={style.tech_container} className="top_border">
-      <h3>Current Technologies</h3>
+    <>
+      <div id={style.heading_container}>
+        <h3 className="top_border">Current Technologies</h3>
+      </div>
       <div id={style.tech}>
         <ul aria-label="List of Current Technologies">
           {logos.map((tech, index) => {
@@ -35,14 +37,14 @@ export default function Tech() {
             );
           })}
           {/* {logos.map((tech, index) => {
-            return (
-              <li key={index} className="icon">
-                <Image src={tech} alt={"tech"} />
-              </li>
-            );
-          })} */}
+        return (
+          <li key={index} className="icon">
+            <Image src={tech} alt={"tech"} />
+          </li>
+        );
+      })} */}
         </ul>
       </div>
-    </div>
+    </>
   );
 }

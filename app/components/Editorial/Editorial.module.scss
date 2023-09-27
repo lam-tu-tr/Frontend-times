@@ -56,6 +56,15 @@
           margin-right: 4px;
         }
       }
+      #tech_used {
+        margin-top: var(--spacing-mobile);
+        display: flex;
+        flex-wrap: wrap;
+        font-size: var(--font-size-small);
+        span {
+          margin-right: var(--spacing-mobile);
+        }
+      }
     }
   }
 }

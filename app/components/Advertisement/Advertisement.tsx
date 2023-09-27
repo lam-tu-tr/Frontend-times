@@ -7,7 +7,7 @@ export default function Advertisement() {
   return (
     <div id={style.ad}>
       Advertisement
-      <aside>
+      <aside className="padded_container">
         <Image
           src={pointer}
           alt="pointer"
