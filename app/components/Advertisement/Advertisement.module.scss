@@ -1,18 +1,30 @@
 #ad {
   text-align: center;
   padding: 0 var(--spacing-mobile);
-  margin: var(--spacing-mobile) 0;
+
   aside {
     min-height: 100px;
-
+    max-width: 1048px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border: 1px solid var(--body-font-color);
-
+    h3 {
+      flex-grow: 4;
+    }
     span {
-      font-size: var(--font-size-large);
+      flex-grow: 1;
+      width: clamp(2.5rem, 1.7647rem + 1vw, 3rem);
+      color: var(--body-font-color);
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  #ad {
+    aside {
+      min-height: 200px;
     }
   }
 }

@@ -12,7 +12,7 @@
   #breaking_news {
     display: flex;
     flex-direction: row;
-    animation: 3s slide infinite linear;
+    animation: 2.5s slide infinite linear;
 
     h2 {
       min-width: 100svw;
@@ -20,6 +20,18 @@
       line-height: normal;
       font-weight: 900;
       margin: var(--spacing-mobile) 0;
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  #header {
+    @include mixins.infinite_scroll(-50svw);
+    #breaking_news {
+      animation: 2s slide infinite linear;
+      h2 {
+        min-width: 50svw;
+      }
     }
   }
 }

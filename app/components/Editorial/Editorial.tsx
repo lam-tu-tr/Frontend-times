@@ -79,17 +79,17 @@ export default function Works() {
 
         <p>{project.description}</p>
 
-        <p>
+        <div id={style.tech_used}>
           {project.tech.map((tech, index) => {
-            return <span key={index}>{tech},</span>;
+            return <span key={index}>{tech}</span>;
           })}
-        </p>
+        </div>
       </li>
     );
   });
 
   return (
-    <section id={style.editorial} className="top_border">
+    <section id={style.editorial} className="top_border ">
       <h3>Editorial Top Project Picks </h3>
       <ul className={style.scroll_container}>{projects}</ul>
     </section>

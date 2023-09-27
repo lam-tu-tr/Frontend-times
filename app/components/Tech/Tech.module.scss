@@ -5,47 +5,60 @@
 //* 40px + 10px(margin)*2 = 60
 @include mixins.infinite_scroll(calc(-60px * 10));
 
-#tech_container {
-  //
+#heading_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  h3 {
+    flex-grow: 5;
+    max-width: 1080px;
+    padding-left: var(--spacing-mobile);
+  }
+}
+#tech {
+  margin-bottom: var(--spacing-mobile);
+  position: relative;
+  //TODO Convert hover to jQuery syntax
+  &:hover {
+    section {
+      animation-play-state: paused;
+    }
+  }
+
+  //* Fade object styling
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    content: "";
+    z-index: 99;
+  }
+
+  //*Fade object blend mode
+  &::before {
+    left: 0;
+    background: linear-gradient(to left, #ffffff00, var(--body-bg-color));
+  }
+  &::after {
+    right: 0;
+    background: linear-gradient(to right, #ffffff00, var(--body-bg-color));
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    animation: 10s slide infinite linear;
+
+    li {
+      margin: 0 10px;
+    }
+  }
+}
+
+@media (min-width: 700px) {
   #tech {
-    margin-top: var(--spacing-mobile);
-    position: relative;
-    //TODO Convert hover to jQuery syntax
-    &:hover {
-      section {
-        animation-play-state: paused;
-      }
-    }
-
-    //* Fade object styling
-    &::before,
-    &::after {
-      position: absolute;
-      top: 0;
-      width: 30%;
-      height: 100%;
-      content: "";
-      z-index: 99;
-    }
-
-    //*Fade object blend mode
-    &::before {
-      left: 0;
-      background: linear-gradient(to left, #ffffff00, var(--body-bg-color));
-    }
-    &::after {
-      right: 0;
-      background: linear-gradient(to right, #ffffff00, var(--body-bg-color));
-    }
-
-    ul {
-      display: flex;
-      flex-direction: row;
-      animation: 10s slide infinite linear;
-
-      li {
-        margin: 0 10px;
-      }
-    }
+    margin-bottom: var(--spacing-tablet);
   }
 }

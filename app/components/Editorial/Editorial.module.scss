@@ -43,9 +43,7 @@
       flex-direction: column;
 
       #project_pic {
-        // flex: 0 0 70%;
         position: relative;
-        min-width: 100%;
         aspect-ratio: 1/1;
       }
       a {
@@ -55,6 +53,35 @@
         h4 {
           margin-right: 4px;
         }
+      }
+      p {
+        flex-grow: 1;
+      }
+      #tech_used {
+        align-items: flex-start;
+        margin-top: var(--spacing-mobile);
+        display: flex;
+        flex-wrap: wrap;
+        font-size: var(--font-size-small);
+        span {
+          margin-right: var(--spacing-mobile);
+        }
+      }
+    }
+  }
+}
+@media (min-width: 700px) {
+  #editorial {
+    max-width: 1080px;
+    margin: 0 auto;
+    ul {
+      grid-auto-columns: 1fr 1fr 1fr;
+      // gap: 2rem;
+      &::before {
+        content: none;
+      }
+      &::after {
+        content: none;
       }
     }
   }

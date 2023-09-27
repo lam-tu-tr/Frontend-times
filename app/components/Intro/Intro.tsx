@@ -10,7 +10,7 @@ export default function Intro({
   scrollToFooter: () => void;
 }) {
   return (
-    <div id={style.intro} className=" top_border">
+    <div id={style.intro} className=" top_border padded_container">
       <h2>New Bay Area developer set to make waves in the tech industry.</h2>
 
       <div id={style.profile_pic} className="img_container">

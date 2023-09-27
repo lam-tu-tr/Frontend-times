@@ -9,15 +9,20 @@
 
   h2 {
     padding: 0;
-    line-height: 2.2rem;
+    line-height: normal;
+    text-wrap: balance;
   }
   #profile_pic {
     aspect-ratio: 3/2;
     position: relative;
     margin: var(--spacing-mobile) 0;
   }
-  p b {
-    font-size: x-large;
+
+  p {
+    font-size: clamp(1.125rem, 0.9044rem + 0.8824vw, 1.5rem);
+    b {
+      font-size: clamp(1.5rem, 1.2794rem + 0.8824vw, 1.875rem);
+    }
   }
 
   aside {
