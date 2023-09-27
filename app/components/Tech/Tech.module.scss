@@ -11,7 +11,7 @@
   justify-content: center;
   h3 {
     flex-grow: 5;
-    max-width: 1080px;
+    max-width: 1200px;
     padding-left: var(--spacing-mobile);
   }
 }
@@ -58,7 +58,14 @@
 }
 
 @media (min-width: 700px) {
+  @include mixins.infinite_scroll(calc(-136px * 10));
   #tech {
     margin-bottom: var(--spacing-tablet);
+    ul {
+      animation: 8s slide infinite linear;
+      li {
+        margin: 0 40px;
+      }
+    }
   }
 }
