@@ -35,9 +35,6 @@ export default function Nav() {
       setLightMode(true);
     }
   };
-  // const setDarkMode = () => {
-  //   document.querySelector("body")?.setAttribute("data-theme", "dark");
-  // };
 
   //* Recalculate Y of Nav to Top on screen resize
   useEffect(() => {
@@ -77,12 +74,6 @@ export default function Nav() {
 
   return (
     <section id={style.nav_section} ref={navRef} className="nav_bar">
-      {/* <ul>
-        <li>-Home-</li>
-        <li>-More About me-</li>
-        <li>-Project Details-</li>
-      </ul> */}
-
       <nav className={`${style.mobile_nav} ${menuOpened && style.menuOpened}`}>
         <a
           href={`#${header.header}`}
@@ -97,7 +88,7 @@ export default function Nav() {
           Editorial
         </a>
         <a
-          href={`#${tech_container.tech_container}`}
+          href={`#${tech_container.heading_container}`}
           onClick={() => setMenuOpened(!menuOpened)}
         >
           Skills
@@ -110,38 +101,44 @@ export default function Nav() {
         </a>
       </nav>
 
-      <aside>
-        {navSticky && (
-          <h3 className={passion_one.className}>
-            {navSticky && "<FRONTEND TIMES/>"}
-          </h3>
-        )}
-        {!navSticky && (
-          <>
-            <span onClick={() => setMode()}>
-              {lightMode ? (
-                <BsSunglasses className="icon" />
-              ) : (
-                <BsEyeglasses className="icon" />
-              )}
-            </span>
+      <div>
+        <aside>
+          {navSticky && (
+            <h3 className={passion_one.className}>
+              {navSticky && "<FRONTEND TIMES/>"}
+            </h3>
+          )}
+          {!navSticky && (
+            <>
+              <span onClick={() => setMode()}>
+                {lightMode ? (
+                  <BsSunglasses className="icon" />
+                ) : (
+                  <BsEyeglasses className="icon" />
+                )}
+              </span>
 
-            {/* <span onClick={() => setEnglish(!english)}>
+              {/* <span onClick={() => setEnglish(!english)}>
               {english ? "English" : "Vietnamese"}
             </span> */}
-          </>
-        )}
-      </aside>
-      <button
-        className={`hamburger hamburger--spin ${menuOpened && "is-active"}`}
-        type="button"
-        aria-label="Navigation Menu"
-        onClick={() => setMenuOpened(!menuOpened)}
-      >
-        <span className="hamburger-box">
-          <span id={style.hamburger_symbol} className="hamburger-inner"></span>
-        </span>
-      </button>
+            </>
+          )}
+        </aside>
+
+        <button
+          className={`hamburger hamburger--spin ${menuOpened && "is-active"}`}
+          type="button"
+          aria-label="Navigation Menu"
+          onClick={() => setMenuOpened(!menuOpened)}
+        >
+          <span className="hamburger-box">
+            <span
+              id={style.hamburger_symbol}
+              className="hamburger-inner"
+            ></span>
+          </span>
+        </button>
+      </div>
     </section>
   );
 }

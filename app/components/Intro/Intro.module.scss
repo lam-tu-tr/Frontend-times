@@ -11,6 +11,7 @@
     padding: 0;
     line-height: normal;
     text-wrap: balance;
+    font-size: clamp(2.625rem, 2.2917rem + 1.3333vw, 2.8rem);
   }
   #profile_pic {
     aspect-ratio: 3/2;
@@ -75,9 +76,9 @@
       grid-column: 5/7;
       grid-row: 1/4;
 
-      aspect-ratio: 4/5;
+      aspect-ratio: 2/3;
       min-width: 300px;
-      margin: 0;
+      margin: 0 0 0 1rem;
     }
 
     p {
@@ -88,7 +89,15 @@
     aside {
       grid-column: 1/5;
       grid-row: 3/4;
-      margin: 0;
+      // margin-top;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  #intro {
+    #profile_pic {
+      aspect-ratio: 5/7;
     }
   }
 }

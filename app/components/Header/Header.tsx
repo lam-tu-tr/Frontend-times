@@ -11,11 +11,13 @@ const passion_one = Passion_One({
 });
 
 export default function Header() {
+  const date = new Date();
+
   return (
     <header id={style.header}>
       <section>
         <h1 className={passion_one.className}>&#60;FRONTEND TIMES/&#62;</h1>
-        <h3>Saturday 9/23/2023</h3>
+        <h3>{date.toLocaleDateString()}</h3>
       </section>
 
       <Nav></Nav>
