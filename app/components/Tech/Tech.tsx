@@ -1,17 +1,6 @@
 import React from "react";
 import style from "./Tech.module.scss";
-import Image from "next/image";
 
-// import css from "../../assets/icons/css.svg";
-// import express from "../../assets/icons/express.svg";
-// import figma from "../../assets/icons/figma.svg";
-// import html from "../../assets/icons/html.svg";
-// import js from "../../assets/icons/javascript.svg";
-// import next from "../../assets/icons/nextjs.svg";
-// import node from "../../assets/icons/nodejs.svg";
-// import prisma from "../../assets/icons/prisma.svg";
-// import ts from "../../assets/icons/typescript.svg";
-// import sass from "../../assets/icons/sass.svg";
 import Css from "@/app/assets/react-svg/tech/Css";
 import Express from "@/app/assets/react-svg/tech/Express";
 import Figma from "@/app/assets/react-svg/tech/Figma";
@@ -24,8 +13,6 @@ import Sass from "@/app/assets/react-svg/tech/Sass";
 import Ts from "@/app/assets/react-svg/tech/Ts";
 
 export default function Tech() {
-  // const logos = [html, css, sass, js, ts, next, node, express, prisma, figma];
-
   const logos = [
     <Html key="html" />,
     <Css key="css" />,
