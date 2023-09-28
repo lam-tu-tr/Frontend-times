@@ -22,6 +22,7 @@ body {
 //* Background paper texture
 html {
   position: relative;
+  scroll-behavior: smooth;
   &::before {
     position: absolute;
     top: 0;
@@ -102,6 +103,13 @@ h4 {
 .icon {
   min-width: 2.5rem;
   min-height: 2.5rem;
+}
+
+//* SVG icon color fill
+.svg_fill {
+  * {
+    fill: var(--svg-fill-color);
+  }
 }
 
 //* ==================Media Queries=======================

@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import Intro from "./components/Intro/Intro";
 import Editorial from "./components/Editorial/Editorial";
@@ -15,14 +15,28 @@ export default function Home() {
   const footerRef = useRef<HTMLElement | null>(null);
 
   function scrollToFooter() {
-    console.log("scrolling");
     if (footerRef.current) {
       footerRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }
+  const [mode, setMode] = useState<String | null | undefined>(null);
+
+  useEffect(() => {
+    const handleThemeChange = () => {
+      setMode(document.querySelector("body")?.getAttribute("data-theme"));
+    };
+    // Attach an event listener to the body element
+    document.body.addEventListener("theme-change", handleThemeChange);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      document.body.removeEventListener("theme-change", handleThemeChange);
+    };
+  }, []);
 
   return (
     <>
+      <h2>{mode}</h2>
       <Header />
 
       <main>
