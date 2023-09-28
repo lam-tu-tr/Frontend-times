@@ -12,7 +12,7 @@
   #breaking_news {
     display: flex;
     flex-direction: row;
-    animation: 2.5s slide infinite linear;
+    animation: 5s slide infinite linear;
 
     h2 {
       min-width: 100svw;
@@ -28,7 +28,6 @@
   #header {
     @include mixins.infinite_scroll(-50svw);
     #breaking_news {
-      animation: 2s slide infinite linear;
       h2 {
         min-width: 50svw;
       }

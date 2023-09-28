@@ -23,12 +23,14 @@
   --body-font-color: #28292f;
   --footer-bg-color: hsl(228, 8%, 12%);
   --footer-font-color: hsl(0, 0%, 100%);
+  --svg-fill-color: hsl(240, 5%, 4%);
 }
 
 [data-theme="dark"] {
   --body-bg-color: hsl(240, 6%, 10%);
   --body-font-color: hsl(54, 100%, 98%);
   --footer-bg-color: hsl(240, 5%, 4%);
+  --svg-fill-color: hsl(0, 0%, 100%);
 }
 
 /*
