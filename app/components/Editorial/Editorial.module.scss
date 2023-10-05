@@ -38,15 +38,15 @@
       flex-basis: ((100% - 80%) / 2); /* Centering calculation */
     }
 
-    #card {
+    .card {
       display: flex;
       flex-direction: column;
-      #project_pic {
+      .project_pic {
         position: relative;
         aspect-ratio: 8/5;
       }
 
-      #project_description {
+      .project_description {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
@@ -79,9 +79,34 @@
           }
         }
       }
+      .ad_project {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid var(--body-font-color);
+        h3 {
+          flex-grow: 4;
+        }
+        span {
+          flex-grow: 1;
+
+          width: clamp(2.5rem, 1.7647rem + 1vw, 3rem);
+        }
+      }
+      #contact_button {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+          padding: var(--spacing-tablet);
+        }
+      }
     }
   }
 }
+
 @media (min-width: 700px) {
   #editorial {
     max-width: 1200px;

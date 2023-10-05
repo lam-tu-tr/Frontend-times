@@ -6,16 +6,16 @@ import Image from "next/image";
 import ItineraryPNG from "../../assets/Itinerary-desktop.png";
 import KimNailsPNG from "../../assets/NailSalon-desktop.png";
 import PokedexPNG from "../../assets/Pokedex-desktop.png";
-import LamTypesPNG from "../../assets/LamTypes-desktop.png";
-
+import LamTypes from "../../assets/LamTypes-desktop.png";
 import { BsArrowUpRight } from "react-icons/bs";
+
+import Pointer_cursor from "@/app/assets/react-svg/Pointer";
 
 const projectsData = [
   {
     title: "Ai Itinery Planner",
     src: ItineraryPNG,
     alt: "Project 1 Pic",
-    rating: 3,
     description:
       "Empower your journey with the magic of Artificial Intelligence, crafting seamless and unforgettable travel itineraries just for you.",
     link: "https://ai-itinerary-planner.vercel.app/",
@@ -25,7 +25,6 @@ const projectsData = [
     title: "Kim Nails ",
     src: KimNailsPNG,
     alt: "Project 2 Pic",
-    rating: 3,
     description:
       "Elevate your style with stunning nail artistry at our salon – book your appointment for pampering perfection.",
     link: "https://www.kimnailsandbeautylounge.com/",
@@ -35,7 +34,6 @@ const projectsData = [
     title: "Sinnoh Pokedex",
     src: PokedexPNG,
     alt: "Project 3 Pic",
-    rating: 3,
     description:
       "Discover and learn about Pokémon like never before with our Pokedex web app - your portal to the Pokemon world",
     link: "https://sinnoh-pokedex.vercel.app/",
@@ -43,21 +41,20 @@ const projectsData = [
   },
   {
     title: "Lam Types",
-    src: LamTypesPNG,
+    src: LamTypes,
     alt: "Project 4 Pic",
-    rating: 3,
     description:
-      "Boost your touch typing skills with this speed test web app - assess your typing speed and accuracy",
-    link: "https://lam-tu-tr.github.io/LamTypes.github.io/",
-    tech: ["Javascript ES6+", "HTML5", "CSS3"],
+      "Test and practice your typing skills using inspirational quotes. Made using pure HTML, CSS, Javascript.",
+    link: "https://lamtran.info",
+    tech: ["Html", "Css", "Javascript"],
   },
 ];
 
-export default function Works() {
+export default function Editorial() {
   const projects = projectsData.map((project, index) => {
     return (
-      <li key={index} id={style.card}>
-        <div id={style.project_pic} className="img_container">
+      <li key={index} className={style.card}>
+        <div className={style.project_pic}>
           <Image
             src={project.src}
             alt={project.alt}
@@ -66,7 +63,7 @@ export default function Works() {
             style={{ objectFit: "contain" }}
           ></Image>
         </div>
-        <div id={style.project_description}>
+        <div className={style.project_description}>
           <a
             aria-label={`${project.title} Project Picture`}
             href={project.link}
@@ -92,7 +89,23 @@ export default function Works() {
   return (
     <section id={style.editorial} className="top_border ">
       <h3>Editorial Top Project Picks </h3>
-      <ul className={style.scroll_container}>{projects}</ul>
+      <ul className={style.scroll_container}>
+        {projects}
+
+        {/* Empty Project Placeholder */}
+        {/* <li className={style.card}>
+          <div className={`${style.project_pic} ${style.ad_project}`}>
+            <h3>This could be your project!</h3>
+          </div>
+          <aside id={style.contact_button}>
+            <a href={`#${footer.footer}`}>
+              <button type="button" className="button_54">
+                Contact
+              </button>
+            </a>
+          </aside>
+        </li> */}
+      </ul>
     </section>
   );
 }
