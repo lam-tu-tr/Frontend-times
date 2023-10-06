@@ -20,19 +20,6 @@
     margin: 5rem 0;
   }
 
-  // #form {
-  //   flex-grow: 4;
-  //   font-size: 3rem;
-  //   display: flex;
-  //   flex-direction: row;
-  //   justify-content: center;
-  //   align-items: center;
-  //   aside {
-  //     display: flex;
-  //     flex-direction: column;
-  //   }
-  // }
-
   #contact {
     padding: 0 3rem;
     font-size: clamp(1.5rem, 1.2059rem + 1.1765vw, 2rem);
@@ -66,5 +53,6 @@
   p {
     font-size: var(--font-size-small);
     padding: 0 var(--spacing-mobile);
+    margin-bottom: var(--spacing-mobile);
   }
 }

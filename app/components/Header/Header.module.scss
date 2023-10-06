@@ -24,7 +24,7 @@
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   #header {
     @include mixins.infinite_scroll(-50svw);
     #breaking_news {
