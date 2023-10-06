@@ -57,7 +57,7 @@
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   @include mixins.infinite_scroll(calc(-136px * 10));
   #tech {
     margin-bottom: var(--spacing-tablet);
