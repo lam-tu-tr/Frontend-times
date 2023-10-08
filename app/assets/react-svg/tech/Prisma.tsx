@@ -1,13 +1,13 @@
-import React from "react";
-
-export default function Prisma({ className }: any) {
+export default function Prisma() {
   return (
     <svg
       viewBox="-27 0 310 310"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid"
-      className={className}
+      aria-label="Prisma"
+      role="img"
+      className="svg_fill"
     >
       <g>
         <path

@@ -3,7 +3,7 @@
 
 //* NOTE multiply length of each logo container with number of logos
 //* 40px + 10px(margin)*2 = 60
-@include mixins.infinite_scroll(calc(-60px * 10));
+@include mixins.infinite_scroll(calc(-60px * 13));
 
 #heading_container {
   display: flex;
@@ -15,6 +15,7 @@
     padding-left: var(--spacing-mobile);
   }
 }
+
 #tech {
   margin-bottom: var(--spacing-mobile);
   position: relative;
@@ -53,12 +54,18 @@
 
     li {
       margin: 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      svg {
+        margin-bottom: 1rem;
+      }
     }
   }
 }
 
 @media (min-width: 800px) {
-  @include mixins.infinite_scroll(calc(-136px * 10));
+  @include mixins.infinite_scroll(calc(-136px * 13));
   #tech {
     margin-bottom: var(--spacing-tablet);
     ul {

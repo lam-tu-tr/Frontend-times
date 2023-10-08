@@ -1,12 +1,11 @@
-import React from "react";
-
-export default function Node({ className }: any) {
+export default function Node() {
   return (
     <svg
       viewBox="0 0 73 73"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      aria-label="NodeJS"
+      role="img"
     >
       <title>build-tools/nodejs</title>
       <desc>Created with Sketch.</desc>

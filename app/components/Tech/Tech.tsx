@@ -5,26 +5,81 @@ import Css from "@/app/assets/react-svg/tech/Css";
 import Express from "@/app/assets/react-svg/tech/Express";
 import Figma from "@/app/assets/react-svg/tech/Figma";
 import Html from "@/app/assets/react-svg/tech/Html";
-import Js from "@/app/assets/react-svg/tech/Js";
+import Javascript from "@/app/assets/react-svg/tech/Javascript";
 import Next from "@/app/assets/react-svg/tech/Next";
 import Node from "@/app/assets/react-svg/tech/Node";
 import Prisma from "@/app/assets/react-svg/tech/Prisma";
 import Sass from "@/app/assets/react-svg/tech/Sass";
-import Ts from "@/app/assets/react-svg/tech/Ts";
+import Typescript from "@/app/assets/react-svg/tech/Typescript";
+import ReactJS from "@/app/assets/react-svg/tech/ReactJS";
+import Git from "@/app/assets/react-svg/tech/Git";
+import Tailwind from "@/app/assets/react-svg/tech/Tailwind";
 
 export default function Tech() {
   const logos = [
-    <Html key="html" />,
-    <Css key="css" />,
-    <Sass key="sass" />,
-    <Js key="js" />,
-    <Ts key="ts" />,
-    <Express key="express" className="svg_fill" />,
-    <Next key="next" className="svg_fill" />,
-    <Node key="node" />,
-    <Prisma key="prisma" className="svg_fill" />,
-    <Figma key="figma" />,
+    {
+      logo: <Html key="html" />,
+      name: "HTML",
+    },
+    {
+      logo: <Css key="css" />,
+      name: "CSS",
+    },
+    {
+      logo: <Sass key="sass" />,
+      name: "Sass",
+    },
+    {
+      logo: <Tailwind key="tailwind" />,
+      name: "Tailwind",
+    },
+    {
+      logo: <Javascript key="js" />,
+      name: "Javascript",
+    },
+    {
+      logo: <Typescript key="ts" />,
+      name: "Typescript",
+    },
+    {
+      logo: <ReactJS key="react" />,
+      name: "React",
+    },
+    {
+      logo: <Express key="express" />,
+      name: "Express",
+    },
+    {
+      logo: <Next key="next" />,
+      name: "Next",
+    },
+    {
+      logo: <Node key="node" />,
+      name: "Node",
+    },
+    {
+      logo: <Prisma key="prisma" />,
+      name: "Prisma",
+    },
+    {
+      logo: <Git key="git" />,
+      name: "Git",
+    },
+    {
+      logo: <Figma key="figma" />,
+      name: "Figma",
+    },
   ];
+
+  const tech_logos = logos.map((tech, index) => {
+    return (
+      <li key={index} className="icon">
+        {tech.logo}
+        {tech.name}
+      </li>
+    );
+  });
+
   return (
     <>
       <div id={style.heading_container}>
@@ -32,27 +87,9 @@ export default function Tech() {
       </div>
       <div id={style.tech}>
         <ul aria-label="List of Current Technologies">
-          {logos.map((tech, index) => {
-            return (
-              <li key={index} className="icon">
-                {tech}
-              </li>
-            );
-          })}
-          {logos.map((tech, index) => {
-            return (
-              <li key={index} className="icon">
-                {tech}
-              </li>
-            );
-          })}
-          {logos.map((tech, index) => {
-            return (
-              <li key={index} className="icon">
-                {tech}
-              </li>
-            );
-          })}
+          {tech_logos}
+          {tech_logos}
+          {tech_logos}
         </ul>
       </div>
     </>
