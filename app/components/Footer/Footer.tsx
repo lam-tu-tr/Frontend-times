@@ -1,6 +1,5 @@
 "use client";
 
-import { forwardRef } from "react";
 import style from "./Footer.module.scss";
 
 import { FaGithub } from "react-icons/fa";
@@ -8,11 +7,9 @@ import { FaLinkedin } from "react-icons/fa";
 
 import { BsMailbox2 } from "react-icons/bs";
 
-interface ChildProps {}
-
-const Footer = forwardRef<HTMLElement, ChildProps>(({}, footerRef) => {
+export default function Footer() {
   return (
-    <footer id={style.footer} ref={footerRef}>
+    <footer id={style.footer}>
       <h3>&#60;FRONTEND TIMES/&#62;</h3>
       {/* <form action="submit" id={style.form}>
         <aside>
@@ -39,7 +36,7 @@ const Footer = forwardRef<HTMLElement, ChildProps>(({}, footerRef) => {
           </span>
           <span>Lam.tu.tr@gmail.com</span>
         </a>
-        <ul id={style.social} aria-label="Social Links" role="list">
+        <ul id={style.social} role="list">
           <li>
             <a
               aria-label="Github"
@@ -63,11 +60,7 @@ const Footer = forwardRef<HTMLElement, ChildProps>(({}, footerRef) => {
         </ul>
       </section>
 
-      <p>Lam Tran &copy; All Rights Reserved</p>
+      <p>Lam Tran &copy; Built using React and NextJS</p>
     </footer>
   );
-});
-
-Footer.displayName = "Footer";
-
-export default Footer;
+}

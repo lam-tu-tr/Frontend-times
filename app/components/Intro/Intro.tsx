@@ -24,12 +24,20 @@ export default function Intro() {
         developer who thrives on the excitement of transforming digital UI/UX
         designs into responsive and tangible digital experience.
       </p>
+      {/* <p>
+        In an industry that is constantly evolving, he has the innate cursiosity
+        and adaptability allows him to learn new technologies quickly and
+        effectively(as demonstrated by his project progressions), staying at the
+        forefront of industry trends, and implementing cutting-edge solutions.
+      </p>
+      <p>
+        &quot;There&apos;s just something about making wireframe or design come
+        to life that I love&quot; - Lam
+      </p> */}
 
-      <aside>
-        <a href={`#${footer.footer}`}>
-          <button type="button" className="button_54">
-            Connect
-          </button>
+      <aside aria-label="Scroll to contact section">
+        <a href={`#${footer.footer}`} className="button_54">
+          Connect
         </a>
       </aside>
     </div>
