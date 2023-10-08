@@ -29,8 +29,9 @@
   aside {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: var(--spacing-mobile);
-    button {
+    a {
       font-size: var(--font-size-medium);
       padding: var(--spacing-mobile);
     }

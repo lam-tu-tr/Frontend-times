@@ -1,13 +1,10 @@
-import React from "react";
-
-export default function Ts({ className }: any) {
+export default function Typescript() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       aria-label="TypeScript"
       role="img"
       viewBox="0 0 512 512"
-      className={className}
     >
       <rect width="512" height="512" rx="15%" fill="#3178c6" />
       <path

@@ -102,28 +102,24 @@ export default function Nav() {
       </nav>
 
       <div>
-        <aside>
-          {navSticky && (
-            <h3 className={passion_one.className}>
-              {navSticky && "<FRONTEND TIMES/>"}
-            </h3>
-          )}
-          {!navSticky && (
-            <>
-              <span onClick={() => setMode()}>
-                {lightMode ? (
-                  <BsSunglasses className="icon" />
-                ) : (
-                  <BsEyeglasses className="icon" />
-                )}
-              </span>
-
-              {/* <span onClick={() => setEnglish(!english)}>
-              {english ? "English" : "Vietnamese"}
-            </span> */}
-            </>
-          )}
-        </aside>
+        {navSticky && (
+          <h3 className={passion_one.className}>
+            {navSticky && "<FRONTEND TIMES/>"}
+          </h3>
+        )}
+        {!navSticky && (
+          <button
+            onClick={() => setMode()}
+            aria-label="Dark mode"
+            type="button"
+          >
+            {lightMode ? (
+              <BsSunglasses className="icon" />
+            ) : (
+              <BsEyeglasses className="icon" />
+            )}
+          </button>
+        )}
 
         <button
           className={`hamburger hamburger--spin ${menuOpened && "is-active"}`}

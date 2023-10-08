@@ -3,13 +3,13 @@ import React from "react";
 import style from "./Editorial.module.scss";
 import Image from "next/image";
 
-import ItineraryPNG from "../../assets/Itinerary-desktop.png";
-import KimNailsPNG from "../../assets/NailSalon-desktop.png";
-import PokedexPNG from "../../assets/Pokedex-desktop.png";
-import LamTypes from "../../assets/LamTypes-desktop.png";
+import ItineraryPNG from "../../assets/project-screenshots/Itinerary-desktop.png";
+import KimNailsPNG from "../../assets/project-screenshots/NailSalon-desktop.png";
+import PokedexPNG from "../../assets/project-screenshots/Pokedex-desktop.png";
+import LamTypes from "../../assets/project-screenshots/LamTypes-desktop.png";
 import { BsArrowUpRight } from "react-icons/bs";
 
-import Pointer_cursor from "@/app/assets/react-svg/Pointer";
+// import Pointer_cursor from "@/app/assets/react-svg/Pointer";
 
 const projectsData = [
   {
@@ -65,13 +65,15 @@ export default function Editorial() {
         </div>
         <div className={style.project_description}>
           <a
-            aria-label={`${project.title} Project Picture`}
+            aria-label={`Open project ${project.title} in new tab`}
             href={project.link}
             target="_blank"
             rel="noreferrer noopener"
           >
             <h4>{project.title}</h4>
-            <BsArrowUpRight />
+            <span>
+              <BsArrowUpRight />
+            </span>
           </a>
 
           <p>{project.description}</p>
