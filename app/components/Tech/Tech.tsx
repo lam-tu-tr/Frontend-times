@@ -75,7 +75,7 @@ export default function Tech() {
     return (
       <li key={index} className="icon">
         {tech.logo}
-        {tech.name}
+        <span>{tech.name}</span>
       </li>
     );
   });

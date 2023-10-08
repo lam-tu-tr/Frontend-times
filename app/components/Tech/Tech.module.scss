@@ -57,8 +57,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      svg {
-        margin-bottom: 1rem;
+      // font-size: clamp(0.6rem, 0.4665rem + 0.7119vw, 1rem);
+      span {
+        visibility: hidden;
       }
     }
   }
@@ -72,6 +73,12 @@
       animation: 12s slide infinite linear;
       li {
         margin: 0 40px;
+        svg {
+          margin-bottom: 1rem;
+        }
+        span {
+          visibility: visible;
+        }
       }
     }
   }
