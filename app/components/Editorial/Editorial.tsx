@@ -70,6 +70,7 @@ export default function Editorial() {
         </div>
 
         <div className={style.project_description}>
+
           <h4>
             <a
               aria-label={`Open project ${project.title} in new tab`}
@@ -93,6 +94,7 @@ export default function Editorial() {
               </a>
             )}
           </h4>
+
 
           <p>{project.description}</p>
 

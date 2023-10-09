@@ -52,6 +52,7 @@
         flex-grow: 1;
         h4 {
           display: flex;
+
           justify-content: space-between;
           a {
             display: flex;
@@ -62,6 +63,14 @@
                 transform: translate(5px, -5px);
                 transition: 0.5s;
               }
+            }
+
+          }
+
+          &:hover {
+            span {
+              transform: translate(5px, -5px);
+              transition: 0.5s;
             }
           }
         }
