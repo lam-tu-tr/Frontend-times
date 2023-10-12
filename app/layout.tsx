@@ -2,6 +2,7 @@ import "./globals.scss";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Lexend_Deca, Inconsolata } from "next/font/google";
+import Header from "./components/Header/Header";
 
 const inconsolata = Inconsolata({
   weight: ["300", "400", "600", "900"],
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inconsolata.className} data-theme="light">
+        <Header />
         {children}
       </body>
       <Analytics />

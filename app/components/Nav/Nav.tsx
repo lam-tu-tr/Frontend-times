@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect, useRef } from "react";
 import style from "./Nav.module.scss";
 
@@ -9,6 +10,8 @@ import footer from "../Footer/Footer.module.scss";
 import { BsEyeglasses, BsSunglasses } from "react-icons/bs";
 
 import { Passion_One } from "next/font/google";
+
+import Link from "next/link";
 
 const passion_one = Passion_One({
   weight: "400",
@@ -99,6 +102,7 @@ export default function Nav() {
         >
           Contact
         </a>
+        <Link href="/gallery">Gallery</Link>
       </nav>
 
       <div>

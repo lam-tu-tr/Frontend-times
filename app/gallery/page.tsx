@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import style from "./gallery.module.scss";
 
 const gallery = [
   {
@@ -35,12 +36,17 @@ const gallery = [
 ];
 export default function page() {
   return (
-    <main className="padded_container">
-      <ul>
-        {gallery.map((image, index) => {
+    <main className={`padded_container`}>
+      <ul className={`${style.gallery_wrapper} mobile_body_padding`}>
+        {gallery.map((photos, index) => {
           return (
             <li key={index}>
-              <Image src={image.src} alt={`Image ${index}`}></Image>
+              <div>Picture</div>
+              {/* <Image src={image.src} alt={`Image ${index}`}></Image> */}
+              <p>{photos.src}</p>
+              <p>{photos.date}</p>
+              <p>{photos.location}</p>
+              <p>{photos.description}</p>
             </li>
           );
         })}
