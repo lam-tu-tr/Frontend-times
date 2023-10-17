@@ -13,16 +13,6 @@
 
   padding: 0 var(--spacing-mobile);
   z-index: 100;
-  // ul {
-  //   display: flex;
-  //   flex-direction: row;
-  //   justify-content: flex-start;
-
-  //   li {
-  //     @include mixins.flexCenter();
-  //     margin-left: 2rem;
-  //   }
-  // }
 
   div {
     display: flex;
@@ -31,7 +21,9 @@
 
     button {
       cursor: pointer;
-      z-index: 101;
+      &:last-child {
+        z-index: 101;
+      }
     }
   }
 }

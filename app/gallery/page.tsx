@@ -2,33 +2,31 @@ import React from "react";
 import Image from "next/image";
 import style from "./gallery.module.scss";
 
+import ItineraryPNG from "../assets/project-screenshots/Itinerary-desktop.png";
+import KimNailsPNG from "../assets/project-screenshots/NailSalon-desktop.png";
+import PokedexPNG from "../assets/project-screenshots/Pokedex-desktop.png";
+import LamTypes from "../assets/project-screenshots/LamTypes-desktop.png";
 const gallery = [
   {
-    src: "temp",
+    src: ItineraryPNG,
     date: "date",
     location: "location",
     description: "description",
   },
   {
-    src: "temp",
+    src: KimNailsPNG,
     date: "date",
     location: "location",
     description: "description",
   },
   {
-    src: "temp",
+    src: PokedexPNG,
     date: "date",
     location: "location",
     description: "description",
   },
   {
-    src: "temp",
-    date: "date",
-    location: "location",
-    description: "description",
-  },
-  {
-    src: "temp",
+    src: LamTypes,
     date: "date",
     location: "location",
     description: "description",
@@ -41,9 +39,10 @@ export default function page() {
         {gallery.map((photos, index) => {
           return (
             <li key={index}>
-              <div>Picture</div>
-              {/* <Image src={image.src} alt={`Image ${index}`}></Image> */}
-              <p>{photos.src}</p>
+              <div>
+                <Image src={photos.src} alt={`Image ${index}`}></Image>
+              </div>
+
               <p>{photos.date}</p>
               <p>{photos.location}</p>
               <p>{photos.description}</p>

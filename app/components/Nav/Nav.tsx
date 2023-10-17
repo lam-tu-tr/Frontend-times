@@ -102,7 +102,7 @@ export default function Nav() {
         >
           Contact
         </a>
-        <Link href="/gallery">Gallery</Link>
+        {/* <Link href="/gallery">Gallery</Link> */}
       </nav>
 
       <div>
