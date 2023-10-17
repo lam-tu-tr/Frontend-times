@@ -16,7 +16,8 @@ html,
 body {
   position: relative;
   overflow-x: hidden;
-  scroll-padding-top: 7svh;
+  height: 100svh;
+  // scroll-padding-top: 7svh;
 }
 
 //* Background paper texture
@@ -82,8 +83,8 @@ h4 {
 
 //* sticky navbar
 .sticky .nav_bar {
-  position: fixed;
-
+  position: sticky;
+  top: 0;
   width: 100%;
 }
 

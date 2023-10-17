@@ -54,26 +54,26 @@ export default function Nav() {
     };
   }, []);
 
-  //* Auto sticky nav when screen scrolls past Nav
-  useEffect(() => {
-    function navStickyScroll() {
-      if (navOffset !== null && window.scrollY >= navOffset) {
-        setNavSticky(true);
-        document.body.classList.add("sticky");
-        document.body.style.paddingTop = navRef.current?.offsetHeight + "px";
-      } else {
-        setNavSticky(false);
-        document.body.classList.remove("sticky");
-        document.body.style.paddingTop = "0px";
-      }
-    }
+  // //* Auto sticky nav when screen scrolls past Nav
+  // useEffect(() => {
+  //   function navStickyScroll() {
+  //     if (navOffset !== null && window.scrollY >= navOffset) {
+  //       setNavSticky(true);
+  //       document.body.classList.add("sticky");
+  //       document.body.style.paddingTop = navRef.current?.offsetHeight + "px";
+  //     } else {
+  //       setNavSticky(false);
+  //       document.body.classList.remove("sticky");
+  //       document.body.style.paddingTop = "0px";
+  //     }
+  //   }
 
-    window.addEventListener("scroll", navStickyScroll);
+  //   window.addEventListener("scroll", navStickyScroll);
 
-    return () => {
-      window.removeEventListener("scroll", navStickyScroll);
-    };
-  }, [navOffset]);
+  //   return () => {
+  //     window.removeEventListener("scroll", navStickyScroll);
+  //   };
+  // }, [navOffset]);
 
   return (
     <section id={style.nav_section} ref={navRef} className="nav_bar">

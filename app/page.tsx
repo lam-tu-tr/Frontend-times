@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 
 import Advertisement from "./components/Advertisement/Advertisement";
 import Header from "./components/Header/Header";
+import Nav from "./components/Nav/Nav";
 
 export default function Home() {
   const [mode, setMode] = useState<String | null | undefined>(null);
@@ -28,7 +29,7 @@ export default function Home() {
   return (
     <>
       {/* <Header /> */}
-
+      {/* <Nav /> */}
       <main>
         <Intro />
         <Editorial />
