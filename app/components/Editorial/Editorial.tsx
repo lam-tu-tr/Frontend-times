@@ -49,7 +49,7 @@ const projectsData = [
     alt: "Project 4 Pic",
     description:
       "Test and practice your typing skills using inspirational quotes. Made using pure HTML, CSS, Javascript.",
-    link: "https://lamtran.info",
+    link: "https://github.com/lam-tu-tr/LamTypes.github.io",
     github: "https://github.com/lam-tu-tr/LamTypes.github.io",
     tech: ["Html", "Css", "Javascript"],
   },
@@ -70,7 +70,6 @@ export default function Editorial() {
         </div>
 
         <div className={style.project_description}>
-
           <h4>
             <a
               aria-label={`Open project ${project.title} in new tab`}
@@ -94,7 +93,6 @@ export default function Editorial() {
               </a>
             )}
           </h4>
-
 
           <p>{project.description}</p>
 

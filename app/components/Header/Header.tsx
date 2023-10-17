@@ -1,5 +1,6 @@
 import React from "react";
 import Nav from "../Nav/Nav";
+import Link from "next/link";
 
 import style from "./Header.module.scss";
 
@@ -16,7 +17,9 @@ export default function Header() {
   return (
     <header id={style.header}>
       <section>
-        <h1 className={passion_one.className}>&#60;FRONTEND TIMES/&#62;</h1>
+        <Link href="/">
+          <h1 className={passion_one.className}>&#60;FRONTEND TIMES/&#62;</h1>
+        </Link>
         <h3>{date.toLocaleDateString()}</h3>
       </section>
 
