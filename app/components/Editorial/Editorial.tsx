@@ -66,6 +66,7 @@ export default function Editorial() {
             fill={true}
             // sizes="60svw"
             style={{ objectFit: "contain" }}
+            loading="lazy"
           ></Image>
         </div>
 

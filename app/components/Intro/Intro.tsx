@@ -16,6 +16,7 @@ export default function Intro() {
           alt={"Avatar"}
           fill={true}
           style={{ objectFit: "cover" }}
+          priority={true}
         ></Image>
       </div>
 
