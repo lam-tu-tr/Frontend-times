@@ -8,7 +8,7 @@ import footer from "../Footer/Footer.module.scss";
 export default function Intro() {
   return (
     <div id={style.intro} className=" top_border padded_container">
-      <h2>New Bay Area developer set to make waves in the tech industry.</h2>
+      <h2>Bay Area developer set to make waves in the tech industry.</h2>
 
       <div id={style.profile_pic} className="img_container">
         <Image
@@ -21,9 +21,9 @@ export default function Intro() {
       </div>
 
       <p>
-        <b>Meet Lam Tran</b>, the emerging electrical engineer turned front-end
-        developer who thrives on the excitement of transforming digital UI/UX
-        designs into responsive and tangible digital experience.
+        <b>Meet Lam Tran</b>, the front-end developer who thrives on the
+        excitement of transforming digital UI/UX designs into responsive and
+        tangible digital experience.
       </p>
       {/* <p>
         In an industry that is constantly evolving, he has the innate cursiosity

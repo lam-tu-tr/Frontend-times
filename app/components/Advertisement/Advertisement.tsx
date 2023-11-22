@@ -12,7 +12,7 @@ export default function Advertisement() {
         <span className="transform -scale-x-100">
           <Pointer_cursor className="svg_fill" />
         </span>
-        <h3>Your Ad Here</h3>
+        <h3>Your Works Here</h3>
         <span>
           <Pointer_cursor className="svg_fill" />
         </span>
