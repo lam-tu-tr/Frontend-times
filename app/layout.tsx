@@ -10,9 +10,9 @@ const inconsolata = Inconsolata({
 });
 
 export const metadata: Metadata = {
-  title: "Lam Tran | Personal Portfolio",
+  title: "Frontend Times",
   description:
-    "Lam Tran is a Frontend Web Dev with project experience in React, Nextjs, SASS",
+    "Bay Area news that highlights local software engineer, projects as well as current technologies",
 };
 
 export default function RootLayout({
