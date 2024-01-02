@@ -10,7 +10,7 @@ const inconsolata = Inconsolata({
 });
 
 export const metadata: Metadata = {
-  title: "Frontend Times",
+  title: "Frontend Times News",
   description:
     "Bay Area news that highlights local software engineer, projects as well as current technologies",
 };
@@ -21,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inconsolata.className} data-theme="light">
+    <html lang="en" className={inconsolata.className}>
+      <body data-theme="light">
         <Header />
         {children}
       </body>

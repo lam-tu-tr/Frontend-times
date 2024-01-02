@@ -1,4 +1,4 @@
-import { ImageResponse } from "next/server";
+import { ImageResponse } from "next/og";
 import { BiCodeAlt } from "react-icons/bi";
 
 // Route segment config
