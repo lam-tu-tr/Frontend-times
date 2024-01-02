@@ -9,19 +9,19 @@ import PokedexPNG from "../../assets/project-screenshots/Pokedex-desktop.png";
 import LamTypes from "../../assets/project-screenshots/LamTypes-desktop.png";
 import { BsArrowUpRight } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
-
+import footer from "../Footer/Footer.module.scss";
 // import Pointer_cursor from "@/app/assets/react-svg/Pointer";
 
 const projectsData = [
   {
-    title: "Ai Itinery Planner",
+    title: "Itinerary Genie",
     src: ItineraryPNG,
     alt: "Project 1 Pic",
     description:
       "Empower your journey with the magic of Artificial Intelligence, crafting seamless and unforgettable travel itineraries just for you.",
     link: "https://ai-itinerary-planner.vercel.app/",
-    github: "https://github.com/lam-tu-tr/PlanMyTrip",
-    tech: ["Prisma", "OpenAI", "Typescript", "NextJS"],
+    github: undefined,
+    tech: ["Redux", "OpenAI", "Typescript", "NextJS"],
   },
   {
     title: "Kim Nails ",
@@ -33,26 +33,26 @@ const projectsData = [
     github: undefined,
     tech: ["NextJS", "Sass/Scss", "React", "Typescript"],
   },
-  {
-    title: "Sinnoh Pokedex",
-    src: PokedexPNG,
-    alt: "Project 3 Pic",
-    description:
-      "Discover and learn about Pokémon like never before with our Pokedex web app - your portal to the Pokemon world",
-    link: "https://sinnoh-pokedex.vercel.app/",
-    github: "https://github.com/lam-tu-tr/SinnohPokedex",
-    tech: ["NodeJS", "Express", "React", "Javascript ES6+"],
-  },
-  {
-    title: "Lam Types",
-    src: LamTypes,
-    alt: "Project 4 Pic",
-    description:
-      "Test and practice your typing skills using inspirational quotes. Made using pure HTML, CSS, Javascript.",
-    link: "https://github.com/lam-tu-tr/LamTypes.github.io",
-    github: "https://github.com/lam-tu-tr/LamTypes.github.io",
-    tech: ["Html", "Css", "Javascript"],
-  },
+  // {
+  //   title: "Sinnoh Pokedex",
+  //   src: PokedexPNG,
+  //   alt: "Project 3 Pic",
+  //   description:
+  //     "Discover and learn about Pokémon like never before with our Pokedex web app - your portal to the Pokemon world",
+  //   link: "https://sinnoh-pokedex.vercel.app/",
+  //   github: "https://github.com/lam-tu-tr/SinnohPokedex",
+  //   tech: ["NodeJS", "Express", "React", "Javascript ES6+"],
+  // },
+  // {
+  //   title: "Lam Types",
+  //   src: LamTypes,
+  //   alt: "Project 4 Pic",
+  //   description:
+  //     "Test and practice your typing skills using inspirational quotes. Made using pure HTML, CSS, Javascript.",
+  //   link: "https://github.com/lam-tu-tr/LamTypes.github.io",
+  //   github: "https://github.com/lam-tu-tr/LamTypes.github.io",
+  //   tech: ["Html", "Css", "Javascript"],
+  // },
 ];
 
 export default function Editorial() {
@@ -114,7 +114,7 @@ export default function Editorial() {
         {projects}
 
         {/* Empty Project Placeholder */}
-        {/* <li className={style.card}>
+        <li className={style.card}>
           <div className={`${style.project_pic} ${style.ad_project}`}>
             <h3>This could be your project!</h3>
           </div>
@@ -125,7 +125,7 @@ export default function Editorial() {
               </button>
             </a>
           </aside>
-        </li> */}
+        </li>
       </ul>
     </section>
   );

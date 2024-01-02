@@ -64,7 +64,6 @@
                 transition: 0.5s;
               }
             }
-
           }
 
           &:hover {
@@ -96,21 +95,21 @@
           }
         }
       }
-      // .ad_project {
-      //   display: flex;
-      //   flex-direction: row;
-      //   justify-content: space-between;
-      //   align-items: center;
-      //   border: 1px solid var(--body-font-color);
-      //   h3 {
-      //     flex-grow: 4;
-      //   }
-      //   span {
-      //     flex-grow: 1;
+      .ad_project {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid var(--body-font-color);
+        h3 {
+          flex-grow: 4;
+        }
+        span {
+          flex-grow: 1;
 
-      //     width: clamp(2.5rem, 1.7647rem + 1vw, 3rem);
-      //   }
-      // }
+          width: clamp(2.5rem, 1.7647rem + 1vw, 3rem);
+        }
+      }
       #contact_button {
         flex-grow: 1;
         display: flex;
