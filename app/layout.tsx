@@ -10,9 +10,25 @@ const inconsolata = Inconsolata({
 });
 
 export const metadata: Metadata = {
+  generator: "Next.js",
   title: "Frontend Times News",
   description:
     "Bay Area news that highlights local software engineer, projects as well as current technologies",
+  authors: { name: "Lam Tran", url: "https://www.linkedin.com/in/lam-t-tran/" },
+  creator: "Lam Tran",
+  keywords: [
+    "Next.js",
+    "React",
+    "JavaScript",
+    "Projects",
+    "Software",
+    "Frontend",
+    "Web Dev",
+    "Portfolio",
+  ],
+  icons: {
+    icon: "./icon.tsx",
+  },
 };
 
 export default function RootLayout({
