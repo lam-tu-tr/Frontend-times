@@ -15,48 +15,50 @@ import footer from "../Footer/Footer.module.scss";
 import { client } from "@/sanity/lib/client";
 import { urlForImage } from "@/sanity/lib/image";
 
-const projectsData = [
-  {
-    title: "Itinerary Genie",
-    src: ItineraryPNG,
-    alt: "Project 1 Pic",
-    description:
-      "Empower your journey with the magic of Artificial Intelligence, crafting seamless and unforgettable travel itineraries just for you.",
-    link: "https://ai-itinerary-planner.vercel.app/",
-    github: undefined,
-    tech: ["Redux", "OpenAI", "Typescript", "NextJS"],
-  },
-  {
-    title: "Kim Nails",
-    src: KimNailsPNG,
-    alt: "Project 2 Pic",
-    description:
-      "Elevate your style with stunning nail artistry at our salon – book your appointment for pampering perfection.",
-    link: "https://www.kimnailsandbeautylounge.com/",
-    github: undefined,
-    tech: ["NextJS", "Sass/Scss", "React", "Typescript"],
-  },
-  // {
-  //   title: "Sinnoh Pokedex",
-  //   src: PokedexPNG,
-  //   alt: "Project 3 Pic",
-  //   description:
-  //     "Discover and learn about Pokémon like never before with our Pokedex web app - your portal to the Pokemon world",
-  //   link: "https://sinnoh-pokedex.vercel.app/",
-  //   github: "https://github.com/lam-tu-tr/SinnohPokedex",
-  //   tech: ["NodeJS", "Express", "React", "Javascript ES6+"],
-  // },
-  // {
-  //   title: "Lam Types",
-  //   src: LamTypes,
-  //   alt: "Project 4 Pic",
-  //   description:
-  //     "Test and practice your typing skills using inspirational quotes. Made using pure HTML, CSS, Javascript.",
-  //   link: "https://github.com/lam-tu-tr/LamTypes.github.io",
-  //   github: "https://github.com/lam-tu-tr/LamTypes.github.io",
-  //   tech: ["Html", "Css", "Javascript"],
-  // },
-];
+// const projectsData = [
+//   {
+//     title: "Itinerary Genie",
+//     src: ItineraryPNG,
+//     alt: "Project 1 Pic",
+//     description:
+//       "Empower your journey with the magic of Artificial Intelligence, crafting seamless and unforgettable travel itineraries just for you.",
+//     link: "https://ai-itinerary-planner.vercel.app/",
+//     github: undefined,
+//     tech: ["Redux", "OpenAI", "Typescript", "NextJS"],
+//   },
+//   {
+//     title: "Kim Nails",
+//     src: KimNailsPNG,
+//     alt: "Project 2 Pic",
+//     description:
+//       "Elevate your style with stunning nail artistry at our salon – book your appointment for pampering perfection.",
+//     link: "https://www.kimnailsandbeautylounge.com/",
+//     github: undefined,
+//     tech: ["NextJS", "Sass/Scss", "React", "Typescript"],
+//   },
+//   // {
+//   //   title: "Sinnoh Pokedex",
+//   //   src: PokedexPNG,
+//   //   alt: "Project 3 Pic",
+//   //   description:
+//   //     "Discover and learn about Pokémon like never before with our Pokedex web app - your portal to the Pokemon world",
+//   //   link: "https://sinnoh-pokedex.vercel.app/",
+//   //   github: "https://github.com/lam-tu-tr/SinnohPokedex",
+//   //   tech: ["NodeJS", "Express", "React", "Javascript ES6+"],
+//   // },
+//   // {
+//   //   title: "Lam Types",
+//   //   src: LamTypes,
+//   //   alt: "Project 4 Pic",
+//   //   description:
+//   //     "Test and practice your typing skills using inspirational quotes. Made using pure HTML, CSS, Javascript.",
+//   //   link: "https://github.com/lam-tu-tr/LamTypes.github.io",
+//   //   github: "https://github.com/lam-tu-tr/LamTypes.github.io",
+//   //   tech: ["Html", "Css", "Javascript"],
+//   // },
+// ];
+export const revalidate = 60;
+
 async function getProjects() {
   const query = `*[_type == "projects"] {
     title,
@@ -67,7 +69,7 @@ async function getProjects() {
 
     "imageUrl": image.asset->url,
   }`;
-  const data = await client.fetch(query, { next: { revalidate: 60 } });
+  const data = await client.fetch(query);
   return data;
 }
 
