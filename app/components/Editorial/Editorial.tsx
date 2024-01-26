@@ -64,9 +64,10 @@ async function getProjects() {
     link,
     technologies,
     image,
+
     "imageUrl": image.asset->url,
   }`;
-  const data = await client.fetch(query);
+  const data = await client.fetch(query, { next: { revalidate: 60 } });
   return data;
 }
 
@@ -79,15 +80,17 @@ export default async function Editorial() {
     return (
       <li key={project.title} className={style.card}>
         <div className={style.project_pic}>
-          <Image
-            src={project.imageUrl}
-            alt={project.image.alt}
-            fill={true}
-            // sizes="60svw"
+          {project.imageUrl && (
+            <Image
+              src={project.imageUrl}
+              alt={project.image.alt}
+              fill={true}
+              // sizes="60svw"
 
-            style={{ objectFit: "contain" }}
-            loading="lazy"
-          ></Image>
+              style={{ objectFit: "contain" }}
+              loading="lazy"
+            ></Image>
+          )}
         </div>
 
         <div className={style.project_description}>
@@ -129,14 +132,14 @@ export default async function Editorial() {
 
   return (
     <section id={style.editorial} className="top_border ">
-      <h3>Editorial Top Project Picks </h3>
+      <h3>Editorial Top Picks </h3>
       <ul className={style.scroll_container}>
         {projects}
 
         {/* Empty Project Placeholder */}
         <li className={style.card}>
           <div className={`${style.project_pic} ${style.ad_project}`}>
-            <h3>This could be your project!</h3>
+            <h3>This could be your website!</h3>
           </div>
           <aside id={style.contact_button}>
             <a href={`#${footer.footer}`}>
