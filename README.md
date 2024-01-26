@@ -1,10 +1,10 @@
 # Portfolio : Frontend Times newspaper
 
-A fictitious news paper site that reports on a certain developer and his projects
+Bay Area news highlighting local software engineer, projects, as well as current technologies
 
-**Link to project:** https://www.lamtran.info/
+**Link to project:** https://www.frontendtimes.dev/
 
-![Pic](/app/assets/Portfolio.png)
+
 
 ## How It's Made:
 
