@@ -21,7 +21,7 @@ export default function Header() {
           <Link href="/">
             <h1 className={passion_one.className}>&#60;FRONTEND TIMES/&#62;</h1>
           </Link>
-          <h3>{date.toLocaleDateString()}</h3>
+          {/* <h3>{date.toLocaleDateString()}</h3> */}
         </section>
       </header>
       <Nav></Nav>

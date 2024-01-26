@@ -12,6 +12,9 @@ import { FaGithub } from "react-icons/fa";
 import footer from "../Footer/Footer.module.scss";
 // import Pointer_cursor from "@/app/assets/react-svg/Pointer";
 
+import { client } from "@/sanity/lib/client";
+import { urlForImage } from "@/sanity/lib/image";
+
 const projectsData = [
   {
     title: "Itinerary Genie",
@@ -24,7 +27,7 @@ const projectsData = [
     tech: ["Redux", "OpenAI", "Typescript", "NextJS"],
   },
   {
-    title: "Kim Nails ",
+    title: "Kim Nails",
     src: KimNailsPNG,
     alt: "Project 2 Pic",
     description:
@@ -54,17 +57,34 @@ const projectsData = [
   //   tech: ["Html", "Css", "Javascript"],
   // },
 ];
+async function getProjects() {
+  const query = `*[_type == "projects"] {
+    title,
+    description,
+    link,
+    technologies,
+    image,
+    "imageUrl": image.asset->url,
+  }`;
+  const data = await client.fetch(query);
+  return data;
+}
 
-export default function Editorial() {
-  const projects = projectsData.map((project, index) => {
+export default async function Editorial() {
+  const fetched_projects = await getProjects();
+
+  console.log(fetched_projects);
+
+  const projects = fetched_projects.map((project: any) => {
     return (
-      <li key={index} className={style.card}>
+      <li key={project.title} className={style.card}>
         <div className={style.project_pic}>
           <Image
-            src={project.src}
-            alt={project.alt}
+            src={project.imageUrl}
+            alt={project.image.alt}
             fill={true}
             // sizes="60svw"
+
             style={{ objectFit: "contain" }}
             loading="lazy"
           ></Image>
@@ -83,7 +103,7 @@ export default function Editorial() {
                 <BsArrowUpRight />
               </span>
             </a>
-            {project.github && (
+            {/* {project.github && (
               <a
                 aria-label="Github"
                 href={project.github}
@@ -92,13 +112,13 @@ export default function Editorial() {
               >
                 <FaGithub />
               </a>
-            )}
+            )} */}
           </h4>
 
           <p>{project.description}</p>
 
           <div id={style.tech_used}>
-            {project.tech.map((tech, index) => {
+            {project.technologies.map((tech: string[], index: number) => {
               return <span key={index}>{tech}</span>;
             })}
           </div>
